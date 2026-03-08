@@ -520,11 +520,17 @@
     margin: 16px 0;
   }
 
-  /* Tooltip / hint balloon */
   .hint-balloon {
-    position: absolute;
-    right: 28px;
-    top: 28px;
+    display: inline-block;
+    margin-left: auto;
+  }
+  .stage-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    gap: 8px;
+    flex-wrap: wrap;
   }
   .hint-btn {
     background: rgba(255,215,0,0.12);
@@ -706,9 +712,6 @@
 
   <!-- Game area -->
   <div class="game-area" id="gameArea" style="display:none">
-    <div class="hint-balloon">
-      <button class="hint-btn" onclick="showHint()">💡 힌트</button>
-    </div>
     <div id="stageContent"></div>
     <div class="feedback" id="feedback"></div>
   </div>
@@ -1005,7 +1008,10 @@ function renderStage1() {
   state.s1_pool = pool;
 
   const content = `
-    <div class="stage-title">✏️ 1단계: 물질의 이름으로 반응식 만들기</div>
+    <div class="stage-header">
+      <div class="stage-title">✏️ 1단계: 물질의 이름으로 반응식 만들기</div>
+      <div class="hint-balloon"><button class="hint-btn" onclick="showHint()">💡 힌트</button></div>
+    </div>
     <div class="stage-desc">아래 물질 이름을 선택한 뒤 반응물 또는 생성물 칸에 넣으세요.<br>
     반응물(왼쪽)과 생성물(오른쪽)을 구분하고, 사이에 <strong style="color:var(--accent2)">→</strong> 기호를 사용합니다.</div>
 
@@ -1153,7 +1159,10 @@ function renderStage2() {
   state.s2_slots = {}; // slotIdx -> {name, formula, raw}
 
   const content = `
-    <div class="stage-title">🔬 2단계: 화학식으로 바꾸기</div>
+    <div class="stage-header">
+      <div class="stage-title">🔬 2단계: 화학식으로 바꾸기</div>
+      <div class="hint-balloon"><button class="hint-btn" onclick="showHint()">💡 힌트</button></div>
+    </div>
     <div class="stage-desc">화학식 카드를 선택한 뒤 올바른 자리에 놓으세요.<br>
     아래 카드 중 <strong>답이 아닌 것도 섞여 있으니</strong> 주의하세요!</div>
 
@@ -1317,7 +1326,10 @@ function renderStage3() {
   const allNames = [...r.reactants, ...r.products];
 
   const content = `
-    <div class="stage-title">⚖️ 3단계: 계수 맞추기</div>
+    <div class="stage-header">
+      <div class="stage-title">⚖️ 3단계: 계수 맞추기</div>
+      <div class="hint-balloon"><button class="hint-btn" onclick="showHint()">💡 힌트</button></div>
+    </div>
     <div class="stage-desc">화학식 앞의 빈 칸에 알맞은 계수(숫자)를 입력하세요.<br>
     원소의 개수는 반응 전과 후에 같아야 합니다. 계수가 1이면 빈 칸으로 두세요.</div>
 
