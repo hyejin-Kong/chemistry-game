@@ -31,7 +31,6 @@
     overflow-x: hidden;
   }
 
-  /* Stars background */
   body::before {
     content: '';
     position: fixed;
@@ -57,7 +56,6 @@
     padding: 20px;
   }
 
-  /* Header */
   .header {
     text-align: center;
     padding: 30px 0 20px;
@@ -70,7 +68,6 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
     letter-spacing: 2px;
-    text-shadow: none;
   }
   .header p {
     color: var(--text-muted);
@@ -78,7 +75,6 @@
     font-size: 0.95rem;
   }
 
-  /* Progress bar */
   .progress-container {
     display: flex;
     align-items: center;
@@ -89,50 +85,13 @@
     padding: 10px 18px;
     border: 1px solid var(--border);
   }
-  .progress-label {
-    font-size: 0.8rem;
-    color: var(--text-muted);
-    white-space: nowrap;
-  }
-  .progress-bar {
-    flex: 1;
-    height: 8px;
-    background: rgba(255,255,255,0.08);
-    border-radius: 50px;
-    overflow: hidden;
-  }
-  .progress-fill {
-    height: 100%;
-    background: linear-gradient(90deg, var(--accent), var(--accent2));
-    border-radius: 50px;
-    transition: width 0.5s ease;
-  }
-  .score-badge {
-    background: linear-gradient(135deg, var(--accent2), #ff9500);
-    color: white;
-    font-family: 'Jua', sans-serif;
-    padding: 4px 14px;
-    border-radius: 50px;
-    font-size: 0.9rem;
-    white-space: nowrap;
-  }
+  .progress-label { font-size: 0.8rem; color: var(--text-muted); white-space: nowrap; }
+  .progress-bar { flex: 1; height: 8px; background: rgba(255,255,255,0.08); border-radius: 50px; overflow: hidden; }
+  .progress-fill { height: 100%; background: linear-gradient(90deg, var(--accent), var(--accent2)); border-radius: 50px; transition: width 0.5s ease; }
+  .score-badge { background: linear-gradient(135deg, var(--accent2), #ff9500); color: white; font-family: 'Jua', sans-serif; padding: 4px 14px; border-radius: 50px; font-size: 0.9rem; white-space: nowrap; }
 
-  /* Reaction selector */
-  .reaction-selector {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 12px;
-    margin: 20px 0;
-  }
-  .reaction-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 16px;
-    cursor: pointer;
-    transition: all 0.2s;
-    text-align: center;
-  }
+  .reaction-selector { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; margin: 20px 0; }
+  .reaction-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 16px; cursor: pointer; transition: all 0.2s; text-align: center; }
   .reaction-card:hover { border-color: var(--accent); transform: translateY(-2px); }
   .reaction-card.selected { border-color: var(--accent); background: rgba(0,229,255,0.08); }
   .reaction-card.completed { border-color: var(--success); }
@@ -141,108 +100,27 @@
   .reaction-card .status { font-size: 0.75rem; color: var(--text-muted); margin-top: 4px; }
   .reaction-card.completed .status { color: var(--success); }
 
-  /* Stage indicator */
-  .stage-nav {
-    display: flex;
-    gap: 8px;
-    margin: 20px 0;
-    background: var(--surface);
-    border-radius: 16px;
-    padding: 8px;
-    border: 1px solid var(--border);
-  }
-  .stage-btn {
-    flex: 1;
-    padding: 10px;
-    border-radius: 10px;
-    border: none;
-    background: transparent;
-    color: var(--text-muted);
-    font-family: 'Nanum Gothic', sans-serif;
-    font-size: 0.85rem;
-    cursor: pointer;
-    transition: all 0.2s;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
-  }
-  .stage-btn.active {
-    background: linear-gradient(135deg, rgba(0,229,255,0.15), rgba(255,107,53,0.15));
-    color: var(--text);
-    border: 1px solid var(--border);
-  }
+  .stage-nav { display: flex; gap: 8px; margin: 20px 0; background: var(--surface); border-radius: 16px; padding: 8px; border: 1px solid var(--border); }
+  .stage-btn { flex: 1; padding: 10px; border-radius: 10px; border: none; background: transparent; color: var(--text-muted); font-family: 'Nanum Gothic', sans-serif; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; display: flex; flex-direction: column; align-items: center; gap: 4px; }
+  .stage-btn.active { background: linear-gradient(135deg, rgba(0,229,255,0.15), rgba(255,107,53,0.15)); color: var(--text); border: 1px solid var(--border); }
   .stage-btn.done { color: var(--success); }
-  .stage-btn .stage-num {
-    font-family: 'Jua', sans-serif;
-    font-size: 1.1rem;
-  }
+  .stage-btn .stage-num { font-family: 'Jua', sans-serif; font-size: 1.1rem; }
   .stage-btn .stage-label { font-size: 0.72rem; }
 
-  /* Game area */
-  .game-area {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 20px;
-    padding: 28px;
-    min-height: 300px;
-    position: relative;
-  }
+  .game-area { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 28px; min-height: 300px; position: relative; }
 
-  .stage-title {
-    font-family: 'Jua', sans-serif;
-    font-size: 1.3rem;
-    color: var(--accent);
-    margin-bottom: 6px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .stage-desc {
-    color: var(--text-muted);
-    font-size: 0.88rem;
-    margin-bottom: 24px;
-    line-height: 1.6;
-  }
+  .stage-title { font-family: 'Jua', sans-serif; font-size: 1.3rem; color: var(--accent); margin-bottom: 6px; display: flex; align-items: center; gap: 10px; }
+  .stage-desc { color: var(--text-muted); font-size: 0.88rem; margin-bottom: 24px; line-height: 1.6; }
 
-  /* ===== STAGE 1 ===== */
-  .reaction-sentence {
-    background: var(--surface2);
-    border-radius: 14px;
-    padding: 18px 22px;
-    font-size: 1.05rem;
-    line-height: 1.8;
-    margin-bottom: 24px;
-    border: 1px solid rgba(255,255,255,0.06);
-  }
-  .reaction-sentence strong {
-    color: var(--accent);
-  }
+  .reaction-sentence { background: var(--surface2); border-radius: 14px; padding: 18px 22px; font-size: 1.05rem; line-height: 1.8; margin-bottom: 24px; border: 1px solid rgba(255,255,255,0.06); }
+  .reaction-sentence strong { color: var(--accent); }
 
-  .equation-builder {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 10px;
-    min-height: 60px;
-    background: rgba(0,0,0,0.25);
-    border-radius: 14px;
-    padding: 14px 18px;
-    border: 2px dashed rgba(0,229,255,0.2);
-    margin-bottom: 20px;
-  }
-  .equation-builder.drag-over {
-    border-color: var(--accent);
-    background: rgba(0,229,255,0.05);
-  }
+  .equation-builder { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; min-height: 60px; background: rgba(0,0,0,0.25); border-radius: 14px; padding: 14px 18px; border: 2px dashed rgba(0,229,255,0.2); margin-bottom: 20px; }
+  .equation-builder.drag-over { border-color: var(--accent); background: rgba(0,229,255,0.05); }
 
-  .eq-slot {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    flex-wrap: wrap;
-  }
+  .eq-slot { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 
+  /* ─── CHIP: touch-action none 필수 ─── */
   .word-chip {
     background: linear-gradient(135deg, rgba(0,229,255,0.15), rgba(0,229,255,0.05));
     border: 1px solid rgba(0,229,255,0.4);
@@ -252,89 +130,28 @@
     cursor: grab;
     transition: all 0.15s;
     white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: none;   /* ← 핵심: 터치 스크롤 차단 */
   }
   .word-chip:hover { border-color: var(--accent); background: rgba(0,229,255,0.2); }
   .word-chip.dragging { opacity: 0.4; }
 
-  .symbol-chip {
-    background: linear-gradient(135deg, rgba(255,107,53,0.2), rgba(255,107,53,0.05));
-    border: 1px solid rgba(255,107,53,0.5);
-    border-radius: 8px;
-    padding: 6px 14px;
-    font-size: 1rem;
-    font-weight: 800;
-    color: var(--accent2);
-  }
+  .symbol-chip { background: linear-gradient(135deg, rgba(255,107,53,0.2), rgba(255,107,53,0.05)); border: 1px solid rgba(255,107,53,0.5); border-radius: 8px; padding: 6px 14px; font-size: 1rem; font-weight: 800; color: var(--accent2); }
 
-  .word-pool {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 16px;
-    background: rgba(0,0,0,0.2);
-    border-radius: 12px;
-    min-height: 56px;
-    border: 1px solid rgba(255,255,255,0.05);
-    margin-bottom: 20px;
-  }
-  .word-pool-label {
-    font-size: 0.78rem;
-    color: var(--text-muted);
-    margin-bottom: 8px;
-  }
+  .word-pool { display: flex; flex-wrap: wrap; gap: 10px; padding: 16px; background: rgba(0,0,0,0.2); border-radius: 12px; min-height: 56px; border: 1px solid rgba(255,255,255,0.05); margin-bottom: 20px; }
+  .word-pool-label { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 8px; }
 
-  /* ===== STAGE 2 ===== */
-  .formula-equation {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 28px;
-  }
-  .formula-slot {
-    min-width: 80px;
-    min-height: 52px;
-    background: rgba(0,0,0,0.3);
-    border: 2px dashed rgba(0,229,255,0.3);
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 8px 12px;
-    transition: all 0.2s;
-    font-size: 1rem;
-  }
-  .formula-slot.filled {
-    border-style: solid;
-    border-color: rgba(0,229,255,0.5);
-    background: rgba(0,229,255,0.08);
-  }
-  .formula-slot.drag-over {
-    border-color: var(--accent);
-    background: rgba(0,229,255,0.12);
-  }
-  .formula-slot.correct {
-    border-color: var(--success);
-    background: rgba(76,255,145,0.08);
-  }
-  .formula-slot.wrong {
-    border-color: var(--error);
-    background: rgba(255,76,107,0.08);
-    animation: shake 0.3s ease;
-  }
+  .formula-equation { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-bottom: 28px; }
+  .formula-slot { min-width: 80px; min-height: 52px; background: rgba(0,0,0,0.3); border: 2px dashed rgba(0,229,255,0.3); border-radius: 10px; display: flex; align-items: center; justify-content: center; padding: 8px 12px; transition: all 0.2s; font-size: 1rem; }
+  .formula-slot.filled { border-style: solid; border-color: rgba(0,229,255,0.5); background: rgba(0,229,255,0.08); }
+  .formula-slot.drag-over { border-color: var(--accent); background: rgba(0,229,255,0.12); }
+  .formula-slot.correct { border-color: var(--success); background: rgba(76,255,145,0.08); }
+  .formula-slot.wrong { border-color: var(--error); background: rgba(255,76,107,0.08); animation: shake 0.3s ease; }
 
-  @keyframes shake {
-    0%,100%{transform:translateX(0)}
-    25%{transform:translateX(-4px)}
-    75%{transform:translateX(4px)}
-  }
+  @keyframes shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-4px)} 75%{transform:translateX(4px)} }
 
-  .formula-slot .slot-label {
-    font-size: 0.7rem;
-    color: var(--text-muted);
-    text-align: center;
-    line-height: 1.3;
-  }
+  .formula-slot .slot-label { font-size: 0.7rem; color: var(--text-muted); text-align: center; line-height: 1.3; }
 
   .formula-chip {
     background: linear-gradient(135deg, rgba(127,255,107,0.15), rgba(127,255,107,0.05));
@@ -346,231 +163,114 @@
     transition: all 0.15s;
     white-space: nowrap;
     user-select: none;
+    -webkit-user-select: none;
+    touch-action: none;   /* ← 핵심 */
   }
   .formula-chip:hover { border-color: var(--accent3); transform: scale(1.03); }
   .formula-chip.dragging { opacity: 0.4; }
   .formula-chip.used { opacity: 0.3; cursor: default; }
 
-  .formula-pool {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 18px;
-    background: rgba(0,0,0,0.2);
-    border-radius: 14px;
-    border: 1px solid rgba(255,255,255,0.05);
-    margin-bottom: 20px;
-  }
-  .formula-pool-label {
-    font-size: 0.78rem;
-    color: var(--text-muted);
-    margin-bottom: 10px;
-  }
+  .formula-pool { display: flex; flex-wrap: wrap; gap: 10px; padding: 18px; background: rgba(0,0,0,0.2); border-radius: 14px; border: 1px solid rgba(255,255,255,0.05); margin-bottom: 20px; }
+  .formula-pool-label { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 10px; }
 
   sub { font-size: 0.7em; vertical-align: sub; }
   sup { font-size: 0.65em; vertical-align: super; }
 
-  /* ===== STAGE 3 ===== */
-  .balancing-area {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 10px;
-    background: rgba(0,0,0,0.25);
-    border-radius: 14px;
-    padding: 20px;
-    border: 1px solid rgba(255,255,255,0.06);
-    margin-bottom: 24px;
-  }
+  .balancing-area { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; background: rgba(0,0,0,0.25); border-radius: 14px; padding: 20px; border: 1px solid rgba(255,255,255,0.06); margin-bottom: 24px; }
 
-  .coeff-group {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-  }
-  .coeff-input {
-    width: 40px;
-    height: 40px;
-    background: rgba(0,0,0,0.4);
-    border: 2px solid rgba(0,229,255,0.3);
-    border-radius: 8px;
-    color: var(--accent);
-    font-family: 'Jua', sans-serif;
-    font-size: 1.1rem;
-    text-align: center;
-    outline: none;
-    transition: border-color 0.2s;
-  }
+  .coeff-group { display: flex; align-items: center; gap: 4px; }
+  .coeff-input { width: 40px; height: 40px; background: rgba(0,0,0,0.4); border: 2px solid rgba(0,229,255,0.3); border-radius: 8px; color: var(--accent); font-family: 'Jua', sans-serif; font-size: 1.1rem; text-align: center; outline: none; transition: border-color 0.2s; }
   .coeff-input:focus { border-color: var(--accent); }
   .coeff-input.correct { border-color: var(--success); color: var(--success); }
   .coeff-input.wrong { border-color: var(--error); color: var(--error); animation: shake 0.3s ease; }
 
-  .formula-display {
-    font-size: 1.15rem;
-    padding: 6px 12px;
-    background: var(--surface2);
-    border-radius: 8px;
-    border: 1px solid rgba(255,255,255,0.08);
-  }
+  .formula-display { font-size: 1.15rem; padding: 6px 12px; background: var(--surface2); border-radius: 8px; border: 1px solid rgba(255,255,255,0.08); }
 
-  .atom-counter {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-  }
-  .atom-count-badge {
-    background: var(--surface2);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 6px 12px;
-    font-size: 0.82rem;
-    display: flex;
-    gap: 10px;
-  }
+  .atom-counter { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
+  .atom-count-badge { background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; padding: 6px 12px; font-size: 0.82rem; display: flex; gap: 10px; }
   .atom-count-badge .atom-sym { color: var(--accent); font-weight: 700; }
   .atom-count-badge .left-count { color: var(--text-muted); }
   .atom-count-badge .right-count { color: var(--text-muted); }
-  .atom-count-badge.balanced .left-count,
-  .atom-count-badge.balanced .right-count { color: var(--success); }
-  .atom-count-badge.unbalanced .left-count,
-  .atom-count-badge.unbalanced .right-count { color: var(--error); }
+  .atom-count-badge.balanced .left-count, .atom-count-badge.balanced .right-count { color: var(--success); }
+  .atom-count-badge.unbalanced .left-count, .atom-count-badge.unbalanced .right-count { color: var(--error); }
 
-  /* Buttons */
-  .btn {
-    padding: 11px 24px;
-    border-radius: 10px;
-    border: none;
-    font-family: 'Jua', sans-serif;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.2s;
-  }
-  .btn-primary {
-    background: linear-gradient(135deg, var(--accent), #0097b2);
-    color: #0f1923;
-  }
+  .btn { padding: 11px 24px; border-radius: 10px; border: none; font-family: 'Jua', sans-serif; font-size: 1rem; cursor: pointer; transition: all 0.2s; }
+  .btn-primary { background: linear-gradient(135deg, var(--accent), #0097b2); color: #0f1923; }
   .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 4px 20px rgba(0,229,255,0.3); }
-  .btn-secondary {
-    background: transparent;
-    border: 1px solid var(--border);
-    color: var(--text-muted);
-  }
+  .btn-secondary { background: transparent; border: 1px solid var(--border); color: var(--text-muted); }
   .btn-secondary:hover { border-color: var(--accent); color: var(--text); }
-  .btn-success {
-    background: linear-gradient(135deg, var(--success), #00b860);
-    color: #0f1923;
-  }
+  .btn-success { background: linear-gradient(135deg, var(--success), #00b860); color: #0f1923; }
+  .btn-row { display: flex; gap: 10px; flex-wrap: wrap; }
 
-  .btn-row {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-  }
-
-  /* Feedback */
-  .feedback {
-    padding: 14px 18px;
-    border-radius: 12px;
-    margin-top: 16px;
-    font-size: 0.92rem;
-    line-height: 1.6;
-    display: none;
-  }
+  .feedback { padding: 14px 18px; border-radius: 12px; margin-top: 16px; font-size: 0.92rem; line-height: 1.6; display: none; }
   .feedback.show { display: block; }
-  .feedback.correct-fb {
-    background: rgba(76,255,145,0.08);
-    border: 1px solid rgba(76,255,145,0.3);
-    color: var(--success);
-  }
-  .feedback.wrong-fb {
-    background: rgba(255,76,107,0.08);
-    border: 1px solid rgba(255,76,107,0.3);
-    color: var(--error);
-  }
-  .feedback.hint-fb {
-    background: rgba(255,215,0,0.08);
-    border: 1px solid rgba(255,215,0,0.3);
-    color: var(--gold);
-  }
+  .feedback.correct-fb { background: rgba(76,255,145,0.08); border: 1px solid rgba(76,255,145,0.3); color: var(--success); }
+  .feedback.wrong-fb { background: rgba(255,76,107,0.08); border: 1px solid rgba(255,76,107,0.3); color: var(--error); }
+  .feedback.hint-fb { background: rgba(255,215,0,0.08); border: 1px solid rgba(255,215,0,0.3); color: var(--gold); }
 
-  /* Completion screen */
-  .completion-screen {
-    text-align: center;
-    padding: 40px 20px;
-    display: none;
-  }
+  .completion-screen { text-align: center; padding: 40px 20px; display: none; }
   .completion-screen.show { display: block; }
   .completion-emoji { font-size: 5rem; margin-bottom: 16px; animation: bounce 0.8s ease infinite alternate; }
   @keyframes bounce { from{transform:translateY(0)} to{transform:translateY(-12px)} }
-  .completion-screen h2 {
-    font-family: 'Jua', sans-serif;
-    font-size: 2rem;
-    background: linear-gradient(135deg, var(--gold), var(--accent2));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-bottom: 12px;
-  }
+  .completion-screen h2 { font-family: 'Jua', sans-serif; font-size: 2rem; background: linear-gradient(135deg, var(--gold), var(--accent2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 12px; }
   .completion-screen p { color: var(--text-muted); margin-bottom: 24px; }
+  .stars { font-size: 2rem; letter-spacing: 8px; margin: 16px 0; }
 
-  .stars {
-    font-size: 2rem;
-    letter-spacing: 8px;
-    margin: 16px 0;
-  }
-
-  .hint-balloon {
-    display: inline-block;
-    margin-left: auto;
-  }
-  .stage-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 6px;
-    gap: 8px;
-    flex-wrap: wrap;
-  }
-  .hint-btn {
-    background: rgba(255,215,0,0.12);
-    border: 1px solid rgba(255,215,0,0.3);
-    color: var(--gold);
-    border-radius: 8px;
-    padding: 6px 14px;
-    font-size: 0.82rem;
-    cursor: pointer;
-    font-family: 'Nanum Gothic', sans-serif;
-    transition: all 0.2s;
-  }
+  .stage-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; gap: 8px; flex-wrap: wrap; }
+  .hint-btn { background: rgba(255,215,0,0.12); border: 1px solid rgba(255,215,0,0.3); color: var(--gold); border-radius: 8px; padding: 6px 14px; font-size: 0.82rem; cursor: pointer; font-family: 'Nanum Gothic', sans-serif; transition: all 0.2s; }
   .hint-btn:hover { background: rgba(255,215,0,0.2); }
 
-  /* drag ghost fix */
-  .no-select { user-select: none; }
+  .arrow-sym { font-size: 1.3rem; color: var(--accent2); font-weight: 900; padding: 0 4px; }
+  .plus-sym { font-size: 1.2rem; color: var(--text-muted); font-weight: 700; }
 
-  .arrow-sym {
-    font-size: 1.3rem;
-    color: var(--accent2);
-    font-weight: 900;
-    padding: 0 4px;
-  }
-  .plus-sym {
-    font-size: 1.2rem;
-    color: var(--text-muted);
-    font-weight: 700;
-  }
-
-  /* Reaction info */
-  .reaction-info-bar {
-    background: var(--surface2);
-    border-radius: 12px;
-    padding: 12px 18px;
-    margin-bottom: 20px;
-    border: 1px solid rgba(255,255,255,0.06);
-    font-size: 0.88rem;
-    color: var(--text-muted);
-  }
+  .reaction-info-bar { background: var(--surface2); border-radius: 12px; padding: 12px 18px; margin-bottom: 20px; border: 1px solid rgba(255,255,255,0.06); font-size: 0.88rem; color: var(--text-muted); }
   .reaction-info-bar strong { color: var(--text); }
+
+  /* tap selection highlight */
+  .word-chip.tap-selected, .formula-chip.tap-selected {
+    border-color: var(--gold) !important;
+    background: rgba(255,215,0,0.2) !important;
+    transform: scale(1.06);
+    box-shadow: 0 0 12px rgba(255,215,0,0.4);
+  }
+  .formula-slot.tap-ready, .equation-builder.tap-ready {
+    border-color: var(--gold) !important;
+    background: rgba(255,215,0,0.08) !important;
+    animation: pulse 0.8s ease infinite alternate;
+  }
+  @keyframes pulse { from{opacity:0.7} to{opacity:1} }
+
+  /* 드래그 중 떠다니는 ghost 클론 */
+  .drag-ghost {
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.85;
+    transform: scale(1.08);
+    transition: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 0.95rem;
+    white-space: nowrap;
+    background: rgba(0,229,255,0.3);
+    border: 2px solid var(--accent);
+    color: var(--text);
+    font-family: 'Nanum Gothic', sans-serif;
+    box-shadow: 0 6px 24px rgba(0,229,255,0.4);
+  }
+
+  .all-complete { display: none; text-align: center; padding: 50px 24px; background: var(--surface); border: 1px solid var(--border); border-radius: 20px; margin-top: 20px; position: relative; overflow: hidden; }
+  .all-complete.show { display: block; }
+  .all-complete::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 0%, rgba(0,229,255,0.08) 0%, transparent 70%), radial-gradient(ellipse at 50% 100%, rgba(255,107,53,0.06) 0%, transparent 70%); pointer-events: none; }
+  .all-complete-trophy { font-size: 5rem; animation: trophyBounce 1s ease infinite alternate; display: block; margin-bottom: 8px; }
+  @keyframes trophyBounce { from{transform:translateY(0) rotate(-5deg)} to{transform:translateY(-14px) rotate(5deg)} }
+  .all-complete h2 { font-family: 'Jua', sans-serif; font-size: 2rem; background: linear-gradient(135deg, var(--gold), var(--accent2), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 14px; }
+  .all-complete p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.8; margin-bottom: 6px; }
+  .all-complete .final-score { font-family: 'Jua', sans-serif; font-size: 2.5rem; color: var(--gold); margin: 20px 0 8px; }
+  .confetti-row { font-size: 1.8rem; letter-spacing: 6px; margin: 16px 0; animation: confettiFade 1.5s ease infinite alternate; }
+  @keyframes confettiFade { from{opacity:0.6} to{opacity:1} }
+  .all-complete .replay-btn { margin-top: 24px; background: linear-gradient(135deg, var(--accent), #0097b2); color: #0f1923; border: none; padding: 13px 32px; border-radius: 12px; font-family: 'Jua', sans-serif; font-size: 1.05rem; cursor: pointer; transition: all 0.2s; }
+  .all-complete .replay-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0,229,255,0.3); }
 
   @media (max-width: 600px) {
     .header h1 { font-size: 1.7rem; }
@@ -592,89 +292,8 @@
     .formula-slot { min-height: 58px; min-width: 70px; }
     .coeff-input { width: 46px; height: 46px; font-size: 1.2rem; }
     .atom-count-badge { font-size: 0.8rem; padding: 8px 12px; }
-    .hint-balloon { top: 16px; right: 16px; }
     .progress-label { display: none; }
   }
-
-  /* Touch tap selection for chips */
-  .word-chip.tap-selected {
-    border-color: var(--gold) !important;
-    background: rgba(255,215,0,0.2) !important;
-    transform: scale(1.06);
-    box-shadow: 0 0 12px rgba(255,215,0,0.4);
-  }
-  .formula-chip.tap-selected {
-    border-color: var(--gold) !important;
-    background: rgba(255,215,0,0.2) !important;
-    transform: scale(1.06);
-    box-shadow: 0 0 12px rgba(255,215,0,0.4);
-  }
-  .formula-slot.tap-ready {
-    border-color: var(--gold);
-    background: rgba(255,215,0,0.08);
-    animation: pulse 0.8s ease infinite alternate;
-  }
-  .drop-zone.tap-ready {
-    border-color: var(--gold) !important;
-    background: rgba(255,215,0,0.08) !important;
-    animation: pulse 0.8s ease infinite alternate;
-  }
-  @keyframes pulse { from{opacity:0.7} to{opacity:1} }
-
-  /* All complete celebration */
-  .all-complete {
-    display: none;
-    text-align: center;
-    padding: 50px 24px;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 20px;
-    margin-top: 20px;
-    position: relative;
-    overflow: hidden;
-  }
-  .all-complete.show { display: block; }
-  .all-complete::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(ellipse at 50% 0%, rgba(0,229,255,0.08) 0%, transparent 70%),
-                radial-gradient(ellipse at 50% 100%, rgba(255,107,53,0.06) 0%, transparent 70%);
-    pointer-events: none;
-  }
-  .all-complete-trophy { font-size: 5rem; animation: trophyBounce 1s ease infinite alternate; display: block; margin-bottom: 8px; }
-  @keyframes trophyBounce { from{transform:translateY(0) rotate(-5deg)} to{transform:translateY(-14px) rotate(5deg)} }
-  .all-complete h2 {
-    font-family: 'Jua', sans-serif;
-    font-size: 2rem;
-    background: linear-gradient(135deg, var(--gold), var(--accent2), var(--accent));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-bottom: 14px;
-  }
-  .all-complete p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.8; margin-bottom: 6px; }
-  .all-complete .final-score {
-    font-family: 'Jua', sans-serif;
-    font-size: 2.5rem;
-    color: var(--gold);
-    margin: 20px 0 8px;
-  }
-  .confetti-row { font-size: 1.8rem; letter-spacing: 6px; margin: 16px 0; animation: confettiFade 1.5s ease infinite alternate; }
-  @keyframes confettiFade { from{opacity:0.6} to{opacity:1} }
-  .all-complete .replay-btn {
-    margin-top: 24px;
-    background: linear-gradient(135deg, var(--accent), #0097b2);
-    color: #0f1923;
-    border: none;
-    padding: 13px 32px;
-    border-radius: 12px;
-    font-family: 'Jua', sans-serif;
-    font-size: 1.05rem;
-    cursor: pointer;
-    transition: all 0.2s;
-  }
-  .all-complete .replay-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0,229,255,0.3); }
 </style>
 </head>
 <body>
@@ -684,17 +303,14 @@
     <p>반응식을 단계별로 완성해 보세요!</p>
   </div>
 
-  <!-- Progress -->
   <div class="progress-container">
     <span class="progress-label">진행도</span>
     <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
     <div class="score-badge">⭐ <span id="scoreDisplay">0</span>점</div>
   </div>
 
-  <!-- Reaction selector -->
   <div id="reactionSelector" class="reaction-selector"></div>
 
-  <!-- Stage nav -->
   <div class="stage-nav" id="stageNav" style="display:none">
     <button class="stage-btn active" id="stageBtnA" onclick="goStage(1)">
       <span class="stage-num">1단계</span>
@@ -710,19 +326,16 @@
     </button>
   </div>
 
-  <!-- Game area -->
   <div class="game-area" id="gameArea" style="display:none">
     <div id="stageContent"></div>
     <div class="feedback" id="feedback"></div>
   </div>
 
-  <!-- All complete celebration -->
   <div class="all-complete" id="allComplete">
     <span class="all-complete-trophy">🏆</span>
     <div class="confetti-row">🎉 🎊 🥳 🎉 🎊</div>
     <h2>모든 반응식 마스터 완료!</h2>
-    <p>6개의 화학 반응식을 모두 완성했어요.<br>
-    반응물, 생성물, 화학식, 계수까지 완벽하게 익혔습니다!</p>
+    <p>6개의 화학 반응식을 모두 완성했어요.<br>반응물, 생성물, 화학식, 계수까지 완벽하게 익혔습니다!</p>
     <p style="color:var(--accent);margin-top:10px;">⚗️ 이제 진짜 화학자의 첫걸음을 뗐어요!</p>
     <div class="final-score" id="finalScore"></div>
     <p style="font-size:0.82rem;color:var(--text-muted)">획득 점수</p>
@@ -731,11 +344,88 @@
 </div>
 
 <script>
-// ===== TOUCH / TAP SUPPORT =====
-// On touch devices, chips work via tap-to-select then tap-to-place
-const isTouchDevice = () => ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
+// ============================================================
+// UNIFIED DRAG & DROP  (마우스 + 터치 통합)
+// ============================================================
+// 전략: 마우스는 HTML5 drag API, 터치는 포인터 이벤트로 ghost clone 직접 이동
+// 두 경로 모두 같은 dropDispatch() 함수로 drop 처리
+// ============================================================
 
-let tapSelected = null;    // { type: 's1'|'s2', word?, formula?, poolIdx?, src? }
+const reactions = [
+  {
+    id:0, level:1, emoji:'🕯️', name:'탄소의 연소',
+    description:'탄소가 산소와 반응하여 이산화탄소가 생성됩니다.',
+    reactants:['탄소','산소'], products:['이산화탄소'],
+    formulas:{'탄소':'C','산소':'O₂','이산화탄소':'CO₂'},
+    formulaRaw:{'탄소':'C','산소':'O2','이산화탄소':'CO2'},
+    coefficients:[1,1,1],
+    atoms:{C:{C:1},O2:{O:2},CO2:{C:1,O:2}},
+    decoyFormulas:['H₂','H₂O','N₂'], decoyRaw:['H2','H2O','N2'],
+  },
+  {
+    id:1, level:2, emoji:'🔬', name:'염화나트륨 생성',
+    description:'나트륨과 염소가 반응하여 염화나트륨(소금)이 됩니다.',
+    reactants:['나트륨','염소'], products:['염화나트륨'],
+    formulas:{'나트륨':'Na','염소':'Cl₂','염화나트륨':'NaCl'},
+    formulaRaw:{'나트륨':'Na','염소':'Cl2','염화나트륨':'NaCl'},
+    coefficients:[2,1,2],
+    atoms:{Na:{Na:1},Cl2:{Cl:2},NaCl:{Na:1,Cl:1}},
+    decoyFormulas:['H₂O','CO₂','Fe₂O₃'], decoyRaw:['H2O','CO2','Fe2O3'],
+  },
+  {
+    id:2, level:3, emoji:'🔥', name:'수소의 연소',
+    description:'수소가 산소와 반응하여 물이 생성됩니다.',
+    reactants:['수소','산소'], products:['물'],
+    formulas:{'수소':'H₂','산소':'O₂','물':'H₂O'},
+    formulaRaw:{'수소':'H2','산소':'O2','물':'H2O'},
+    coefficients:[2,1,2],
+    atoms:{H2:{H:2},O2:{O:2},H2O:{H:2,O:1}},
+    decoyFormulas:['CO₂','N₂','NaCl'], decoyRaw:['CO2','N2','NaCl'],
+  },
+  {
+    id:3, level:4, emoji:'💧', name:'물의 전기분해',
+    description:'물에 전기를 통하면 수소와 산소로 분해됩니다.',
+    reactants:['물'], products:['수소','산소'],
+    formulas:{'물':'H₂O','수소':'H₂','산소':'O₂'},
+    formulaRaw:{'물':'H2O','수소':'H2','산소':'O2'},
+    coefficients:[2,2,1],
+    atoms:{H2O:{H:2,O:1},H2:{H:2},O2:{O:2}},
+    decoyFormulas:['CO₂','NaCl','Fe₂O₃'], decoyRaw:['CO2','NaCl','Fe2O3'],
+  },
+  {
+    id:4, level:5, emoji:'🧪', name:'철의 산화',
+    description:'철이 산소와 반응하여 산화철(III)이 생성됩니다.',
+    reactants:['철','산소'], products:['산화철(III)'],
+    formulas:{'철':'Fe','산소':'O₂','산화철(III)':'Fe₂O₃'},
+    formulaRaw:{'철':'Fe','산소':'O2','산화철(III)':'Fe2O3'},
+    coefficients:[4,3,2],
+    atoms:{Fe:{Fe:1},O2:{O:2},Fe2O3:{Fe:2,O:3}},
+    decoyFormulas:['H₂O','CO₂','NaCl'], decoyRaw:['H2O','CO2','NaCl'],
+  },
+  {
+    id:5, level:6, emoji:'🥗', name:'광합성',
+    description:'식물이 이산화탄소와 물로 포도당과 산소를 만듭니다.',
+    reactants:['이산화탄소','물'], products:['포도당','산소'],
+    formulas:{'이산화탄소':'CO₂','물':'H₂O','포도당':'C₆H₁₂O₆','산소':'O₂'},
+    formulaRaw:{'이산화탄소':'CO2','물':'H2O','포도당':'C6H12O6','산소':'O2'},
+    coefficients:[6,6,1,6],
+    atoms:{CO2:{C:1,O:2},H2O:{H:2,O:1},C6H12O6:{C:6,H:12,O:6},O2:{O:2}},
+    decoyFormulas:['N₂','NaCl','Fe₂O₃'], decoyRaw:['N2','NaCl','Fe2O3'],
+  }
+];
+
+let state = {
+  currentReaction: null,
+  currentStage: 1,
+  stageComplete: [false,false,false],
+  score: 0,
+  reactionScores: {},
+  s1_left:[], s1_right:[], s1_pool:[],
+  s2_pool:[], s2_slots:{},
+};
+
+// ── 탭 선택(tap-to-select) 상태 ──
+let tapSelected = null;
 let tapSelectedEl = null;
 
 function clearTapSelection() {
@@ -743,308 +433,81 @@ function clearTapSelection() {
     tapSelectedEl.classList.remove('tap-selected');
     tapSelectedEl = null;
   }
-  // remove all tap-ready highlights
   document.querySelectorAll('.tap-ready').forEach(el => el.classList.remove('tap-ready'));
   tapSelected = null;
 }
 
-// Stage 1 tap handlers
-function s1ChipTap(el, word, src) {
-  if (!isTouchDevice()) return;
-  if (tapSelected && tapSelected.type === 's1' && tapSelected.word === word && tapSelected.src === src) {
-    clearTapSelection(); return;
-  }
-  clearTapSelection();
-  tapSelected = { type: 's1', word, src };
-  tapSelectedEl = el;
-  el.classList.add('tap-selected');
-  // highlight drop zones
-  document.getElementById('s1Left')?.classList.add('tap-ready', 'drop-zone');
-  document.getElementById('s1Right')?.classList.add('tap-ready', 'drop-zone');
-  document.getElementById('s1Pool')?.classList.add('tap-ready', 'drop-zone');
+// ── 터치 드래그 ghost 상태 ──
+let touchGhost = null;
+let touchDragData = null;   // { stage, ...payload }
+let touchOffsetX = 0, touchOffsetY = 0;
+
+function createGhost(text, x, y) {
+  removeGhost();
+  touchGhost = document.createElement('div');
+  touchGhost.className = 'drag-ghost';
+  touchGhost.innerHTML = renderFormula(text);
+  touchGhost.style.left = (x - 40) + 'px';
+  touchGhost.style.top  = (y - 24) + 'px';
+  document.body.appendChild(touchGhost);
+}
+function moveGhost(x, y) {
+  if (!touchGhost) return;
+  touchGhost.style.left = (x - 40) + 'px';
+  touchGhost.style.top  = (y - 24) + 'px';
+}
+function removeGhost() {
+  if (touchGhost) { touchGhost.remove(); touchGhost = null; }
 }
 
-function s1ZoneTap(zone) {
-  if (!isTouchDevice() || !tapSelected || tapSelected.type !== 's1') return;
-  const { word, src } = tapSelected;
-  clearTapSelection();
-  // Remove from source
-  if (src === 'pool') state.s1_pool = state.s1_pool.filter(w => w !== word);
-  else if (src === 'left') state.s1_left = state.s1_left.filter(w => w !== word);
-  else if (src === 'right') state.s1_right = state.s1_right.filter(w => w !== word);
-  // Place in target
-  if (zone === 'left') state.s1_left.push(word);
-  else if (zone === 'right') state.s1_right.push(word);
-  else state.s1_pool.push(word);
-  s1Refresh();
+// 터치 좌표 아래의 실제 drop 대상 찾기 (ghost 일시 숨김)
+function elementFromTouchPoint(x, y) {
+  if (touchGhost) touchGhost.style.display = 'none';
+  const el = document.elementFromPoint(x, y);
+  if (touchGhost) touchGhost.style.display = '';
+  return el;
 }
 
-// Stage 2 tap handlers
-function s2ChipTap(el, formula, poolIdx) {
-  if (!isTouchDevice()) return;
-  if (tapSelected && tapSelected.type === 's2' && tapSelected.poolIdx === poolIdx) {
-    clearTapSelection(); return;
-  }
-  clearTapSelection();
-  tapSelected = { type: 's2', formula, poolIdx };
-  tapSelectedEl = el;
-  el.classList.add('tap-selected');
-  // highlight slots
-  document.querySelectorAll('.formula-slot').forEach(s => s.classList.add('tap-ready'));
-}
-
-function s2SlotTap(slotIdx) {
-  if (!isTouchDevice() || !tapSelected || tapSelected.type !== 's2') return;
-  const { formula, poolIdx } = tapSelected;
-  clearTapSelection();
-  if (state.s2_slots[slotIdx]) state.s2_slots[slotIdx] = null;
-  state.s2_slots[slotIdx] = { formula, poolIdx: String(poolIdx) };
-  s2Refresh();
-}
-
-function s2FilledSlotTap(el, formula, poolIdx, slotIdx) {
-  if (!isTouchDevice()) return;
-  // if something selected, swap; else select this
-  if (tapSelected && tapSelected.type === 's2') {
-    // place selected into this slot, return this slot's formula to pool
-    state.s2_slots[slotIdx] = { formula: tapSelected.formula, poolIdx: String(tapSelected.poolIdx) };
-    clearTapSelection();
-    s2Refresh();
-  } else {
-    clearTapSelection();
-    // unplace: return to pool
-    state.s2_slots[slotIdx] = null;
-    s2Refresh();
-    clearTapSelection();
-  }
-}
-
-// ===== REACTIONS DATA =====
-const reactions = [
-  {
-    id: 0,
-    level: 1,
-    emoji: '🕯️',
-    name: '탄소의 연소',
-    description: '탄소가 산소와 반응하여 이산화탄소가 생성됩니다.',
-    reactants: ['탄소', '산소'],
-    products: ['이산화탄소'],
-    formulas: { '탄소': 'C', '산소': 'O₂', '이산화탄소': 'CO₂' },
-    formulaRaw: { '탄소': 'C', '산소': 'O2', '이산화탄소': 'CO2' },
-    coefficients: [1, 1, 1],
-    atoms: { C: {C:1}, O2: {O:2}, CO2: {C:1,O:2} },
-    decoyFormulas: ['H₂', 'H₂O', 'N₂'],
-    decoyRaw: ['H2', 'H2O', 'N2'],
-  },
-  {
-    id: 1,
-    level: 2,
-    emoji: '🔬',
-    name: '염화나트륨 생성',
-    description: '나트륨과 염소가 반응하여 염화나트륨(소금)이 됩니다.',
-    reactants: ['나트륨', '염소'],
-    products: ['염화나트륨'],
-    formulas: { '나트륨': 'Na', '염소': 'Cl₂', '염화나트륨': 'NaCl' },
-    formulaRaw: { '나트륨': 'Na', '염소': 'Cl2', '염화나트륨': 'NaCl' },
-    coefficients: [2, 1, 2],
-    atoms: { Na: {Na:1}, Cl2: {Cl:2}, NaCl: {Na:1,Cl:1} },
-    decoyFormulas: ['H₂O', 'CO₂', 'Fe₂O₃'],
-    decoyRaw: ['H2O', 'CO2', 'Fe2O3'],
-  },
-  {
-    id: 2,
-    level: 3,
-    emoji: '🔥',
-    name: '수소의 연소',
-    description: '수소가 산소와 반응하여 물이 생성됩니다.',
-    reactants: ['수소', '산소'],
-    products: ['물'],
-    formulas: { '수소': 'H₂', '산소': 'O₂', '물': 'H₂O' },
-    formulaRaw: { '수소': 'H2', '산소': 'O2', '물': 'H2O' },
-    coefficients: [2, 1, 2],
-    atoms: { H2: {H:2}, O2: {O:2}, H2O: {H:2,O:1} },
-    decoyFormulas: ['CO₂', 'N₂', 'NaCl'],
-    decoyRaw: ['CO2', 'N2', 'NaCl'],
-  },
-  {
-    id: 3,
-    level: 4,
-    emoji: '💧',
-    name: '물의 전기분해',
-    description: '물에 전기를 통하면 수소와 산소로 분해됩니다.',
-    reactants: ['물'],
-    products: ['수소', '산소'],
-    formulas: { '물': 'H₂O', '수소': 'H₂', '산소': 'O₂' },
-    formulaRaw: { '물': 'H2O', '수소': 'H2', '산소': 'O2' },
-    coefficients: [2, 2, 1],
-    atoms: { H2O: {H:2,O:1}, H2: {H:2}, O2: {O:2} },
-    decoyFormulas: ['CO₂', 'NaCl', 'Fe₂O₃'],
-    decoyRaw: ['CO2', 'NaCl', 'Fe2O3'],
-  },
-  {
-    id: 4,
-    level: 5,
-    emoji: '🧪',
-    name: '철의 산화',
-    description: '철이 산소와 반응하여 산화철(III)이 생성됩니다.',
-    reactants: ['철', '산소'],
-    products: ['산화철(III)'],
-    formulas: { '철': 'Fe', '산소': 'O₂', '산화철(III)': 'Fe₂O₃' },
-    formulaRaw: { '철': 'Fe', '산소': 'O2', '산화철(III)': 'Fe2O3' },
-    coefficients: [4, 3, 2],
-    atoms: { Fe: {Fe:1}, O2: {O:2}, Fe2O3: {Fe:2,O:3} },
-    decoyFormulas: ['H₂O', 'CO₂', 'NaCl'],
-    decoyRaw: ['H2O', 'CO2', 'NaCl'],
-  },
-  {
-    id: 5,
-    level: 6,
-    emoji: '🥗',
-    name: '광합성',
-    description: '식물이 이산화탄소와 물로 포도당과 산소를 만듭니다.',
-    reactants: ['이산화탄소', '물'],
-    products: ['포도당', '산소'],
-    formulas: { '이산화탄소': 'CO₂', '물': 'H₂O', '포도당': 'C₆H₁₂O₆', '산소': 'O₂' },
-    formulaRaw: { '이산화탄소': 'CO2', '물': 'H2O', '포도당': 'C6H12O6', '산소': 'O2' },
-    coefficients: [6, 6, 1, 6],
-    atoms: { CO2: {C:1,O:2}, H2O: {H:2,O:1}, C6H12O6: {C:6,H:12,O:6}, O2: {O:2} },
-    decoyFormulas: ['N₂', 'NaCl', 'Fe₂O₃'],
-    decoyRaw: ['N2', 'NaCl', 'Fe2O3'],
-  }
-];
-
-// ===== STATE =====
-let state = {
-  currentReaction: null,
-  currentStage: 1,
-  stageComplete: [false, false, false],
-  score: 0,
-  reactionScores: {},
-  // Stage 1
-  s1_leftSlots: [],  // words placed on left
-  s1_rightSlots: [], // words placed on right
-  s1_pool: [],
-  // Stage 2
-  s2_slots: {},  // slotIdx -> formulaKey
-  s2_dragging: null,
-  // Stage 3
-  // no extra state needed
-};
-
-// ===== INIT =====
-function init() {
-  renderReactionSelector();
-  updateScore();
-}
-
-function renderReactionSelector() {
-  const el = document.getElementById('reactionSelector');
-  el.innerHTML = reactions.map(r => {
-    const sc = state.reactionScores[r.id] || { stages: 0 };
-    const done = sc.stages === 3;
-    const levelStars = '⭐'.repeat(r.level);
-    return `<div class="reaction-card ${state.currentReaction?.id === r.id ? 'selected' : ''} ${done ? 'completed' : ''}"
-      onclick="selectReaction(${r.id})">
-      <div class="emoji">${r.emoji}</div>
-      <div class="name">${r.name}</div>
-      <div style="font-size:0.72rem;color:var(--accent);margin:4px 0;letter-spacing:1px">Lv.${r.level} ${levelStars}</div>
-      <div class="status">${done ? '✅ 완료!' : sc.stages > 0 ? `${sc.stages}단계 완료` : '도전 전'}</div>
-    </div>`;
-  }).join('');
-}
-
-function selectReaction(id) {
-  state.currentReaction = reactions[id];
-  state.currentStage = 1;
-  state.stageComplete = [false, false, false];
-  // restore progress if any
-  const sc = state.reactionScores[id];
-  if (sc) {
-    for (let i = 0; i < sc.stages; i++) state.stageComplete[i] = true;
-    state.currentStage = Math.min(sc.stages + 1, 3);
-  }
-  renderReactionSelector();
-  document.getElementById('stageNav').style.display = 'flex';
-  document.getElementById('gameArea').style.display = 'block';
-  updateStageNav();
-  renderStage(state.currentStage);
-}
-
-function goStage(n) {
-  if (n > 1 && !state.stageComplete[n-2]) {
-    showFeedback('이전 단계를 먼저 완료하세요!', 'hint');
-    return;
-  }
-  state.currentStage = n;
-  updateStageNav();
-  renderStage(n);
-}
-
-function updateStageNav() {
-  [1,2,3].forEach(i => {
-    const btn = document.getElementById(`stageBtn${String.fromCharCode(64+i)}`);
-    btn.className = 'stage-btn';
-    if (i === state.currentStage) btn.classList.add('active');
-    if (state.stageComplete[i-1]) btn.classList.add('done');
-  });
-}
-
-// ===== STAGE RENDER =====
-function renderStage(n) {
-  hideFeedback();
-  if (n === 1) renderStage1();
-  else if (n === 2) renderStage2();
-  else renderStage3();
-}
-
-// ===== STAGE 1: Name-based equation builder =====
+// ============================================================
+// STAGE 1 – 이름 드래그
+// ============================================================
 function renderStage1() {
   const r = state.currentReaction;
   const allWords = [...r.reactants, ...r.products];
-  // shuffle pool
-  const pool = shuffle([...allWords]);
   state.s1_left = [];
   state.s1_right = [];
-  state.s1_pool = pool;
+  state.s1_pool = shuffle([...allWords]);
 
   const content = `
     <div class="stage-header">
       <div class="stage-title">✏️ 1단계: 물질의 이름으로 반응식 만들기</div>
-      <div class="hint-balloon"><button class="hint-btn" onclick="showHint()">💡 힌트</button></div>
+      <div><button class="hint-btn" onclick="showHint()">💡 힌트</button></div>
     </div>
-    <div class="stage-desc">아래 물질 이름을 선택한 뒤 반응물 또는 생성물 칸에 넣으세요.<br>
-    반응물(왼쪽)과 생성물(오른쪽)을 구분하고, 사이에 <strong style="color:var(--accent2)">→</strong> 기호를 사용합니다.</div>
-
+    <div class="stage-desc">아래 물질 이름을 드래그하거나 눌러서 반응물/생성물 칸에 넣으세요.</div>
     <div class="reaction-info-bar">📖 <strong>${r.name}</strong>: ${r.description}</div>
 
-    <div class="word-pool-label">📦 물질 이름 (드래그하거나 눌러서 선택하세요)</div>
-    <div class="word-pool" id="s1Pool" 
+    <div class="word-pool-label">📦 물질 이름</div>
+    <div class="word-pool" id="s1Pool"
       ondragover="event.preventDefault();this.classList.add('drag-over')"
       ondragleave="this.classList.remove('drag-over')"
-      ondrop="s1DropToPool(event)"
-      onclick="s1ZoneTap('pool')">
-      ${pool.map(w => wordChip(w, 'pool')).join('')}
+      ondrop="s1DropToPool(event)">
     </div>
 
-    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:16px;">
-      <div>
+    <div style="display:flex;align-items:flex-start;gap:10px;flex-wrap:wrap;margin-bottom:16px;">
+      <div style="flex:1;min-width:140px;">
         <div class="word-pool-label">⬅️ 반응물</div>
-        <div class="equation-builder drop-zone" id="s1Left"
+        <div class="equation-builder" id="s1Left"
           ondragover="event.preventDefault();this.classList.add('drag-over')"
           ondragleave="this.classList.remove('drag-over')"
-          ondrop="s1Drop(event,'left')"
-          onclick="s1ZoneTap('left')"
-          style="min-width:160px;"></div>
+          ondrop="s1Drop(event,'left')"></div>
       </div>
-      <div class="arrow-sym" style="font-size:2rem;margin-top:18px;">→</div>
-      <div>
+      <div class="arrow-sym" style="font-size:2rem;margin-top:26px;">→</div>
+      <div style="flex:1;min-width:140px;">
         <div class="word-pool-label">➡️ 생성물</div>
-        <div class="equation-builder drop-zone" id="s1Right"
+        <div class="equation-builder" id="s1Right"
           ondragover="event.preventDefault();this.classList.add('drag-over')"
           ondragleave="this.classList.remove('drag-over')"
-          ondrop="s1Drop(event,'right')"
-          onclick="s1ZoneTap('right')"
-          style="min-width:160px;"></div>
+          ondrop="s1Drop(event,'right')"></div>
       </div>
     </div>
 
@@ -1054,128 +517,163 @@ function renderStage1() {
     </div>
   `;
   document.getElementById('stageContent').innerHTML = content;
-  setupS1Drag();
-}
-
-function wordChip(w, src) {
-  return `<div class="word-chip no-select" draggable="true" data-word="${w}" data-src="${src}"
-    ondragstart="s1DragStart(event)"
-    ondragend="s1DragEnd(event)"
-    onclick="s1ChipTap(this,'${w}','${src}')">${w}</div>`;
-}
-
-function setupS1Drag() {
-  // add tap zone listeners after render (for touch devices)
-  if (!isTouchDevice()) return;
-  const left = document.getElementById('s1Left');
-  const right = document.getElementById('s1Right');
-  const pool = document.getElementById('s1Pool');
-  if (left) left.addEventListener('click', (e) => { if (e.target === left || e.target.classList.contains('plus-sym')) s1ZoneTap('left'); });
-  if (right) right.addEventListener('click', (e) => { if (e.target === right || e.target.classList.contains('plus-sym')) s1ZoneTap('right'); });
-  if (pool) pool.addEventListener('click', (e) => { if (e.target === pool) s1ZoneTap('pool'); });
-}
-
-let s1Dragging = null;
-let s1DragSrc = null;
-function s1DragStart(e) {
-  s1Dragging = e.target.dataset.word;
-  s1DragSrc = e.target.dataset.src;
-  e.target.classList.add('dragging');
-  e.dataTransfer.effectAllowed = 'move';
-}
-function s1DragEnd(e) { e.target.classList.remove('dragging'); }
-
-function s1Drop(e, side) {
-  e.preventDefault();
-  e.currentTarget.classList.remove('drag-over');
-  if (!s1Dragging) return;
-  // Remove from source
-  if (s1DragSrc === 'pool') state.s1_pool = state.s1_pool.filter(w => w !== s1Dragging);
-  else if (s1DragSrc === 'left') state.s1_left = state.s1_left.filter(w => w !== s1Dragging);
-  else if (s1DragSrc === 'right') state.s1_right = state.s1_right.filter(w => w !== s1Dragging);
-  if (side === 'left') state.s1_left.push(s1Dragging);
-  else state.s1_right.push(s1Dragging);
-  s1Dragging = null;
-  s1Refresh();
-}
-
-function s1DropToPool(e) {
-  e.preventDefault();
-  e.currentTarget.classList.remove('drag-over');
-  if (!s1Dragging) return;
-  if (s1DragSrc === 'left') state.s1_left = state.s1_left.filter(w => w !== s1Dragging);
-  else if (s1DragSrc === 'right') state.s1_right = state.s1_right.filter(w => w !== s1Dragging);
-  if (!state.s1_pool.includes(s1Dragging)) state.s1_pool.push(s1Dragging);
-  s1Dragging = null;
   s1Refresh();
 }
 
 function s1Refresh() {
-  const pool = document.getElementById('s1Pool');
-  const left = document.getElementById('s1Left');
+  const pool  = document.getElementById('s1Pool');
+  const left  = document.getElementById('s1Left');
   const right = document.getElementById('s1Right');
-  if (pool) pool.innerHTML = state.s1_pool.map(w => wordChip(w,'pool')).join('');
-  if (left) left.innerHTML = s1BuildSide(state.s1_left, 'left');
-  if (right) right.innerHTML = s1BuildSide(state.s1_right, 'right');
+  if (pool)  pool.innerHTML  = state.s1_pool.map(w => s1Chip(w,'pool')).join('');
+  if (left)  left.innerHTML  = s1SideHTML(state.s1_left,'left');
+  if (right) right.innerHTML = s1SideHTML(state.s1_right,'right');
+  // 터치 이벤트 재등록
+  document.querySelectorAll('.word-chip').forEach(chip => {
+    chip.addEventListener('touchstart', onChipTouchStart, {passive:false});
+  });
+  // zone tap (빈 영역 클릭) 등록 — zone 자체에 onclick 없이 pointerup으로 처리
 }
 
-function s1BuildSide(words, side) {
-  if (words.length === 0) return '';
-  return words.map((w, i) => {
-    const chip = `<div class="word-chip no-select" draggable="true" data-word="${w}" data-src="${side}"
-      ondragstart="s1DragStart(event)" ondragend="s1DragEnd(event)">${w}</div>`;
-    return i < words.length - 1 ? chip + `<span class="plus-sym">+</span>` : chip;
-  }).join('');
+function s1Chip(w, src) {
+  return `<div class="word-chip" draggable="true"
+    data-word="${w}" data-src="${src}" data-stage="s1"
+    ondragstart="s1DragStart(event)"
+    ondragend="s1DragEnd(event)"
+    onclick="s1ChipClick(this,'${w}','${src}')"
+  >${w}</div>`;
 }
+
+function s1SideHTML(words, side) {
+  if (!words.length) return '';
+  return words.map((w,i) =>
+    s1Chip(w, side) + (i < words.length-1 ? `<span class="plus-sym">+</span>` : '')
+  ).join('');
+}
+
+// 마우스 drag
+let s1DragWord = null, s1DragSrc = null;
+function s1DragStart(e) {
+  s1DragWord = e.currentTarget.dataset.word;
+  s1DragSrc  = e.currentTarget.dataset.src;
+  e.currentTarget.classList.add('dragging');
+  e.dataTransfer.effectAllowed = 'move';
+}
+function s1DragEnd(e) { e.currentTarget.classList.remove('dragging'); }
+
+function s1Drop(e, side) {
+  e.preventDefault();
+  e.currentTarget.classList.remove('drag-over');
+  const word = s1DragWord || touchDragData?.word;
+  const src  = s1DragSrc  || touchDragData?.src;
+  if (!word) return;
+  s1RemoveFromSrc(word, src);
+  if (side === 'left')  state.s1_left.push(word);
+  else                  state.s1_right.push(word);
+  s1DragWord = null; s1DragSrc = null;
+  s1Refresh();
+}
+function s1DropToPool(e) {
+  e.preventDefault();
+  e.currentTarget.classList.remove('drag-over');
+  const word = s1DragWord || touchDragData?.word;
+  const src  = s1DragSrc  || touchDragData?.src;
+  if (!word) return;
+  s1RemoveFromSrc(word, src);
+  if (!state.s1_pool.includes(word)) state.s1_pool.push(word);
+  s1DragWord = null; s1DragSrc = null;
+  s1Refresh();
+}
+function s1RemoveFromSrc(word, src) {
+  if (src === 'pool')  state.s1_pool  = state.s1_pool.filter(w=>w!==word);
+  if (src === 'left')  state.s1_left  = state.s1_left.filter(w=>w!==word);
+  if (src === 'right') state.s1_right = state.s1_right.filter(w=>w!==word);
+}
+
+// 클릭(탭) – tap-to-select
+function s1ChipClick(el, word, src) {
+  // 터치 드래그 중엔 무시
+  if (touchDragData) return;
+  if (tapSelected && tapSelected.type==='s1' && tapSelected.word===word && tapSelected.src===src) {
+    clearTapSelection(); return;
+  }
+  clearTapSelection();
+  tapSelected = {type:'s1', word, src};
+  tapSelectedEl = el;
+  el.classList.add('tap-selected');
+  document.getElementById('s1Left') ?.classList.add('tap-ready');
+  document.getElementById('s1Right')?.classList.add('tap-ready');
+  document.getElementById('s1Pool') ?.classList.add('tap-ready');
+}
+
+// zone 클릭 시 chip이 선택돼있으면 이동
+document.addEventListener('click', function(e) {
+  if (!tapSelected || tapSelected.type !== 's1') return;
+  const left  = document.getElementById('s1Left');
+  const right = document.getElementById('s1Right');
+  const pool  = document.getElementById('s1Pool');
+  let zone = null;
+  if (left  && (left  === e.target || left.contains(e.target)))  zone = 'left';
+  if (right && (right === e.target || right.contains(e.target))) zone = 'right';
+  if (pool  && (pool  === e.target || pool.contains(e.target)))  zone = 'pool';
+  if (!zone) return;
+  // chip 클릭은 제외
+  if (e.target.classList.contains('word-chip')) return;
+  const {word, src} = tapSelected;
+  clearTapSelection();
+  s1RemoveFromSrc(word, src);
+  if (zone === 'left')  state.s1_left.push(word);
+  else if (zone === 'right') state.s1_right.push(word);
+  else state.s1_pool.push(word);
+  s1Refresh();
+}, true);
 
 function checkStage1() {
   const r = state.currentReaction;
-  const leftOk = arraysMatch(state.s1_left.slice().sort(), r.reactants.slice().sort());
-  const rightOk = arraysMatch(state.s1_right.slice().sort(), r.products.slice().sort());
-  if (state.s1_left.length === 0 && state.s1_right.length === 0) {
-    showFeedback('물질 이름을 반응물과 생성물 칸에 드래그해 넣어보세요!', 'hint'); return;
+  if (!state.s1_left.length && !state.s1_right.length) {
+    showFeedback('물질 이름을 반응물과 생성물 칸에 넣어보세요!','hint'); return;
   }
+  const leftOk  = arraysMatch(state.s1_left.slice().sort(),  r.reactants.slice().sort());
+  const rightOk = arraysMatch(state.s1_right.slice().sort(), r.products.slice().sort());
   if (leftOk && rightOk) {
-    markStageComplete(0, 30);
-    showFeedback(`🎉 정답! <strong>${r.reactants.join(' + ')} → ${r.products.join(' + ')}</strong><br>반응물과 생성물을 올바르게 구분했어요! 2단계로 넘어가세요.`, 'correct');
+    markStageComplete(0,30);
+    showFeedback(`🎉 정답! <strong>${r.reactants.join(' + ')} → ${r.products.join(' + ')}</strong><br>반응물과 생성물을 올바르게 구분했어요!`,'correct');
     addNextStageBtn(2);
   } else {
     let hint = '';
-    if (!leftOk) hint += `반응물 힌트: ${r.reactants.length}개의 물질이 있어요. `;
-    if (!rightOk) hint += `생성물 힌트: ${r.products.length}개의 물질이 있어요.`;
-    showFeedback('❌ 다시 확인해보세요. ' + hint, 'wrong');
+    if (!leftOk)  hint += `반응물: ${r.reactants.length}개 `;
+    if (!rightOk) hint += `생성물: ${r.products.length}개`;
+    showFeedback('❌ 다시 확인해보세요. ' + hint,'wrong');
   }
 }
 
-// ===== STAGE 2: Formula drag =====
+// ============================================================
+// STAGE 2 – 화학식 드래그
+// ============================================================
 function renderStage2() {
   const r = state.currentReaction;
   const allNames = [...r.reactants, ...r.products];
-  // Build pool: correct formulas + decoys, shuffled
-  const correctFormulas = allNames.map(n => ({ name: n, formula: r.formulas[n], raw: r.formulaRaw[n], correct: true }));
-  const decoys = r.decoyFormulas.map((f, i) => ({ name: null, formula: f, raw: r.decoyRaw[i], correct: false }));
-  const pool = shuffle([...correctFormulas, ...decoys]);
-  state.s2_pool = pool;
-  state.s2_slots = {}; // slotIdx -> {name, formula, raw}
+  const corrects = allNames.map(n => ({name:n, formula:r.formulas[n], raw:r.formulaRaw[n], correct:true}));
+  const decoys   = r.decoyFormulas.map((f,i)=>({name:null, formula:f, raw:r.decoyRaw[i], correct:false}));
+  state.s2_pool  = shuffle([...corrects, ...decoys]);
+  state.s2_slots = {};
 
   const content = `
     <div class="stage-header">
       <div class="stage-title">🔬 2단계: 화학식으로 바꾸기</div>
-      <div class="hint-balloon"><button class="hint-btn" onclick="showHint()">💡 힌트</button></div>
+      <div><button class="hint-btn" onclick="showHint()">💡 힌트</button></div>
     </div>
-    <div class="stage-desc">화학식 카드를 선택한 뒤 올바른 자리에 놓으세요.<br>
-    아래 카드 중 <strong>답이 아닌 것도 섞여 있으니</strong> 주의하세요!</div>
+    <div class="stage-desc">화학식 카드를 드래그하거나 눌러서 올바른 자리에 놓으세요.<br>
+    답이 아닌 카드도 섞여 있으니 주의하세요!</div>
 
     <div style="font-size:0.82rem;color:var(--text-muted);margin-bottom:10px;">반응식:</div>
     <div class="formula-equation" id="s2Equation">
       ${buildS2Equation(r, allNames)}
     </div>
 
-    <div class="formula-pool-label">🃏 화학식 카드 (드래그하거나 눌러서 선택하세요)</div>
+    <div class="formula-pool-label">🃏 화학식 카드</div>
     <div class="formula-pool" id="s2Pool"
       ondragover="event.preventDefault()"
       ondrop="s2DropToPool(event)">
-      ${pool.map((p,i) => formulaChip(p.formula, i)).join('')}
     </div>
 
     <div class="btn-row">
@@ -1184,49 +682,77 @@ function renderStage2() {
     </div>
   `;
   document.getElementById('stageContent').innerHTML = content;
+  s2Refresh();
 }
 
 function buildS2Equation(r, allNames) {
-  const reactants = r.reactants;
-  const products = r.products;
   let html = '';
-  reactants.forEach((name, i) => {
-    html += formulaSlot(allNames.indexOf(name), name);
-    if (i < reactants.length - 1) html += `<span class="plus-sym">+</span>`;
+  r.reactants.forEach((name,i) => {
+    html += s2Slot(allNames.indexOf(name), name);
+    if (i < r.reactants.length-1) html += `<span class="plus-sym">+</span>`;
   });
   html += `<span class="arrow-sym">→</span>`;
-  products.forEach((name, i) => {
-    html += formulaSlot(allNames.indexOf(name), name);
-    if (i < products.length - 1) html += `<span class="plus-sym">+</span>`;
+  r.products.forEach((name,i) => {
+    html += s2Slot(allNames.indexOf(name), name);
+    if (i < r.products.length-1) html += `<span class="plus-sym">+</span>`;
   });
   return html;
 }
 
-function formulaSlot(idx, name) {
+function s2Slot(idx, name) {
   return `<div class="formula-slot" id="s2slot_${idx}" data-slot="${idx}" data-name="${name}"
     ondragover="event.preventDefault();this.classList.add('drag-over')"
     ondragleave="this.classList.remove('drag-over')"
     ondrop="s2Drop(event,${idx})"
-    onclick="s2SlotTap(${idx})">
+    onclick="s2SlotClick(${idx})">
     <span class="slot-label">${name}</span>
   </div>`;
 }
 
-function formulaChip(formula, idx) {
-  return `<div class="formula-chip no-select" draggable="true" data-idx="${idx}" data-formula="${formula}"
+function s2FormulaChip(p, i) {
+  return `<div class="formula-chip" draggable="true"
+    data-idx="${i}" data-formula="${p.formula}" data-stage="s2"
     ondragstart="s2DragStart(event)"
     ondragend="s2DragEnd(event)"
-    onclick="s2ChipTap(this,'${formula}',${idx})">${renderFormula(formula)}</div>`;
+    onclick="s2ChipClick(this,'${p.formula}',${i})"
+  >${renderFormula(p.formula)}</div>`;
 }
 
-let s2DragIdx = null;
-let s2DragFormula = null;
-let s2DragFrom = null; // 'pool' or slotIdx
+function s2Refresh() {
+  const r = state.currentReaction;
+  const allNames = [...r.reactants, ...r.products];
+  const usedIdx  = new Set(Object.values(state.s2_slots).filter(Boolean).map(v=>v.poolIdx));
 
+  allNames.forEach((name,i)=>{
+    const slot = document.getElementById(`s2slot_${i}`);
+    if (!slot) return;
+    const val = state.s2_slots[i];
+    if (val) {
+      slot.innerHTML = `<span style="font-size:1.05rem">${renderFormula(val.formula)}</span>`;
+      slot.classList.add('filled');
+    } else {
+      slot.innerHTML = `<span class="slot-label">${name}</span>`;
+      slot.classList.remove('filled','correct','wrong');
+    }
+  });
+
+  const pool = document.getElementById('s2Pool');
+  if (pool) {
+    pool.innerHTML = state.s2_pool
+      .map((p,i) => usedIdx.has(String(i)) ? '' : s2FormulaChip(p,i))
+      .join('');
+  }
+
+  // 터치 이벤트 재등록
+  document.querySelectorAll('.formula-chip').forEach(chip => {
+    chip.addEventListener('touchstart', onChipTouchStart, {passive:false});
+  });
+}
+
+let s2DragFormula=null, s2DragIdx=null;
 function s2DragStart(e) {
-  s2DragIdx = e.currentTarget.dataset.idx;
   s2DragFormula = e.currentTarget.dataset.formula;
-  s2DragFrom = e.currentTarget.dataset.src || 'pool';
+  s2DragIdx     = e.currentTarget.dataset.idx;
   e.currentTarget.classList.add('dragging');
   e.dataTransfer.effectAllowed = 'move';
 }
@@ -1235,110 +761,83 @@ function s2DragEnd(e) { e.currentTarget.classList.remove('dragging'); }
 function s2Drop(e, slotIdx) {
   e.preventDefault();
   e.currentTarget.classList.remove('drag-over');
-  if (s2DragFormula === null) return;
-  // If slot already filled, put old formula back to pool
-  if (state.s2_slots[slotIdx]) {
-    // put back to pool
-    state.s2_slots[slotIdx] = null;
-  }
-  // Remove from pool display
-  const r = state.currentReaction;
-  const allNames = [...r.reactants, ...r.products];
-  state.s2_slots[slotIdx] = { formula: s2DragFormula, poolIdx: s2DragIdx };
+  const formula = s2DragFormula || touchDragData?.formula;
+  const poolIdx = s2DragIdx     || touchDragData?.poolIdx;
+  if (!formula) return;
+  state.s2_slots[slotIdx] = {formula, poolIdx:String(poolIdx)};
+  s2DragFormula=null; s2DragIdx=null;
   s2Refresh();
-  s2DragFormula = null;
 }
-
 function s2DropToPool(e) {
   e.preventDefault();
-  // Find which slot had this
-  // handled in s2Refresh
-  s2DragFormula = null;
+  s2DragFormula=null; s2DragIdx=null;
 }
 
-function s2Refresh() {
-  const r = state.currentReaction;
-  const allNames = [...r.reactants, ...r.products];
-  const usedPoolIdxs = new Set(Object.values(state.s2_slots).filter(Boolean).map(v => v.poolIdx));
-  // Refresh slots
-  allNames.forEach((name, i) => {
-    const slot = document.getElementById(`s2slot_${i}`);
-    if (!slot) return;
-    const val = state.s2_slots[i];
-    if (val) {
-      slot.innerHTML = `<span style="font-size:1.05rem">${renderFormula(val.formula)}</span>`;
-      slot.classList.add('filled');
-      slot.setAttribute('draggable', 'true');
-      slot.onclick = () => s2FilledSlotTap(slot, val.formula, val.poolIdx, i);
-      slot.ondragstart = (ev) => { s2DragFormula = val.formula; s2DragIdx = val.poolIdx; s2DragFrom = i; ev.dataTransfer.effectAllowed='move'; };
-      slot.ondrop = (ev) => s2Drop(ev, i);
-    } else {
-      slot.innerHTML = `<span class="slot-label">${name}</span>`;
-      slot.classList.remove('filled');
-    }
-  });
-  // Refresh pool
-  const pool = document.getElementById('s2Pool');
-  if (pool) pool.innerHTML = state.s2_pool.map((p, i) =>
-    usedPoolIdxs.has(String(i)) ? '' : formulaChip(p.formula, i)
-  ).join('');
+function s2ChipClick(el, formula, poolIdx) {
+  if (touchDragData) return;
+  if (tapSelected && tapSelected.type==='s2' && tapSelected.poolIdx===poolIdx) {
+    clearTapSelection(); return;
+  }
+  clearTapSelection();
+  tapSelected = {type:'s2', formula, poolIdx};
+  tapSelectedEl = el;
+  el.classList.add('tap-selected');
+  document.querySelectorAll('.formula-slot').forEach(s=>s.classList.add('tap-ready'));
+}
+
+function s2SlotClick(slotIdx) {
+  if (touchDragData) return;
+  if (tapSelected && tapSelected.type==='s2') {
+    const {formula, poolIdx} = tapSelected;
+    clearTapSelection();
+    state.s2_slots[slotIdx] = {formula, poolIdx:String(poolIdx)};
+    s2Refresh();
+  } else if (state.s2_slots[slotIdx]) {
+    // 이미 채워진 슬롯 클릭 → 제거
+    state.s2_slots[slotIdx] = null;
+    s2Refresh();
+  }
 }
 
 function checkStage2() {
   const r = state.currentReaction;
   const allNames = [...r.reactants, ...r.products];
-  let allFilled = allNames.every((_, i) => state.s2_slots[i]);
-  if (!allFilled) { showFeedback('모든 빈 칸을 채워주세요!', 'hint'); return; }
-
-  let allCorrect = true;
-  allNames.forEach((name, i) => {
+  if (!allNames.every((_,i)=>state.s2_slots[i])) {
+    showFeedback('모든 빈 칸을 채워주세요!','hint'); return;
+  }
+  let ok = true;
+  allNames.forEach((name,i)=>{
     const slot = document.getElementById(`s2slot_${i}`);
     const expected = r.formulaRaw[name];
-    const got = state.s2_pool[state.s2_slots[i]?.poolIdx]?.raw;
-    if (got !== expected) {
-      allCorrect = false;
-      slot.classList.add('wrong');
-      setTimeout(() => slot.classList.remove('wrong'), 600);
-    } else {
-      slot.classList.add('correct');
-    }
+    const got = state.s2_pool[Number(state.s2_slots[i]?.poolIdx)]?.raw;
+    slot.classList.remove('correct','wrong');
+    if (got !== expected) { ok=false; slot.classList.add('wrong'); setTimeout(()=>slot.classList.remove('wrong'),600); }
+    else { slot.classList.add('correct'); }
   });
-
-  if (allCorrect) {
-    markStageComplete(1, 30);
-    const eq = buildFormulaEqString(r, allNames);
-    showFeedback(`🎉 정답! <strong>${eq}</strong><br>화학식을 올바르게 맞췄어요! 3단계로 넘어가세요.`, 'correct');
+  if (ok) {
+    markStageComplete(1,30);
+    const eq = r.reactants.map(n=>r.formulas[n]).join(' + ') + ' → ' + r.products.map(n=>r.formulas[n]).join(' + ');
+    showFeedback(`🎉 정답! <strong>${eq}</strong><br>화학식을 올바르게 맞췄어요!`,'correct');
     addNextStageBtn(3);
   } else {
-    showFeedback('❌ 틀린 화학식이 있어요. 다시 확인해보세요!', 'wrong');
+    showFeedback('❌ 틀린 화학식이 있어요. 다시 확인해보세요!','wrong');
   }
 }
 
-function buildFormulaEqString(r, allNames) {
-  const left = r.reactants.map(n => r.formulas[n]).join(' + ');
-  const right = r.products.map(n => r.formulas[n]).join(' + ');
-  return `${left} → ${right}`;
-}
-
-// ===== STAGE 3: Coefficient balancing =====
+// ============================================================
+// STAGE 3 – 계수 입력
+// ============================================================
 function renderStage3() {
   const r = state.currentReaction;
-  const allNames = [...r.reactants, ...r.products];
-
   const content = `
     <div class="stage-header">
       <div class="stage-title">⚖️ 3단계: 계수 맞추기</div>
-      <div class="hint-balloon"><button class="hint-btn" onclick="showHint()">💡 힌트</button></div>
+      <div><button class="hint-btn" onclick="showHint()">💡 힌트</button></div>
     </div>
-    <div class="stage-desc">화학식 앞의 빈 칸에 알맞은 계수(숫자)를 입력하세요.<br>
-    원소의 개수는 반응 전과 후에 같아야 합니다. 계수가 1이면 빈 칸으로 두세요.</div>
-
-    <div class="balancing-area" id="s3Equation">
-      ${buildS3Equation(r)}
-    </div>
-
+    <div class="stage-desc">화학식 앞의 빈 칸에 알맞은 계수를 입력하세요.<br>
+    계수가 1이면 빈 칸으로 두세요.</div>
+    <div class="balancing-area" id="s3Equation">${buildS3Equation(r)}</div>
     <div id="atomCounter" class="atom-counter"></div>
-
     <div class="btn-row">
       <button class="btn btn-primary" onclick="checkStage3()">✅ 확인하기</button>
       <button class="btn btn-secondary" onclick="clearCoeffs()">🔄 초기화</button>
@@ -1349,235 +848,243 @@ function renderStage3() {
 }
 
 function buildS3Equation(r) {
-  const reactants = r.reactants;
-  const products = r.products;
   let html = '';
-  reactants.forEach((name, i) => {
-    html += coeffGroup(name, r, `left_${i}`);
-    if (i < reactants.length - 1) html += `<span class="plus-sym">+</span>`;
+  r.reactants.forEach((name,i)=>{
+    html += coeffGroup(name,r,`left_${i}`);
+    if (i < r.reactants.length-1) html += `<span class="plus-sym">+</span>`;
   });
   html += `<span class="arrow-sym">→</span>`;
-  products.forEach((name, i) => {
-    html += coeffGroup(name, r, `right_${i}`);
-    if (i < products.length - 1) html += `<span class="plus-sym">+</span>`;
+  r.products.forEach((name,i)=>{
+    html += coeffGroup(name,r,`right_${i}`);
+    if (i < r.products.length-1) html += `<span class="plus-sym">+</span>`;
   });
   return html;
 }
 
-function coeffGroup(name, r, id) {
+function coeffGroup(name,r,id) {
   return `<div class="coeff-group">
-    <input class="coeff-input" type="text" inputmode="numeric" id="coeff_${id}" maxlength="2" placeholder="?" oninput="validateCoeff(this);updateAtomCounter()" />
+    <input class="coeff-input" type="text" inputmode="numeric" id="coeff_${id}"
+      maxlength="2" placeholder="?" oninput="validateCoeff(this);updateAtomCounter()"/>
     <div class="formula-display">${renderFormula(r.formulas[name])}</div>
   </div>`;
 }
 
 function validateCoeff(el) {
-  // 숫자만 허용
-  el.value = el.value.replace(/[^0-9]/g, '');
+  el.value = el.value.replace(/[^0-9]/g,'');
   const v = parseInt(el.value);
-  if (v === 1) {
-    el.value = '';
-    el.placeholder = '1은 안 써요';
-    setTimeout(() => { el.placeholder = '?'; }, 1400);
-  } else if (v > 20) {
-    el.value = '20';
-  }
+  if (v===1){ el.value=''; el.placeholder='1은 안 써요'; setTimeout(()=>{el.placeholder='?';},1400); }
+  else if (v>20){ el.value='20'; }
 }
 
 function getCoeff(id) {
-  const el = document.getElementById('coeff_' + id);
+  const el = document.getElementById('coeff_'+id);
   if (!el) return 1;
   const v = parseInt(el.value);
-  return isNaN(v) || v < 2 ? 1 : v;
+  return isNaN(v)||v<2 ? 1 : v;
 }
 
 function updateAtomCounter() {
   const r = state.currentReaction;
-  const reactants = r.reactants;
-  const products = r.products;
-
-  const leftAtoms = {};
-  reactants.forEach((name, i) => {
-    const c = getCoeff(`left_${i}`);
-    const raw = r.formulaRaw[name];
-    const atoms = r.atoms[raw] || {};
-    Object.entries(atoms).forEach(([el, n]) => {
-      leftAtoms[el] = (leftAtoms[el] || 0) + c * n;
-    });
+  const leftAtoms={}, rightAtoms={};
+  r.reactants.forEach((name,i)=>{
+    const c=getCoeff(`left_${i}`), atoms=r.atoms[r.formulaRaw[name]]||{};
+    Object.entries(atoms).forEach(([el,n])=>{ leftAtoms[el]=(leftAtoms[el]||0)+c*n; });
   });
-  const rightAtoms = {};
-  products.forEach((name, i) => {
-    const c = getCoeff(`right_${i}`);
-    const raw = r.formulaRaw[name];
-    const atoms = r.atoms[raw] || {};
-    Object.entries(atoms).forEach(([el, n]) => {
-      rightAtoms[el] = (rightAtoms[el] || 0) + c * n;
-    });
+  r.products.forEach((name,i)=>{
+    const c=getCoeff(`right_${i}`), atoms=r.atoms[r.formulaRaw[name]]||{};
+    Object.entries(atoms).forEach(([el,n])=>{ rightAtoms[el]=(rightAtoms[el]||0)+c*n; });
   });
-
-  const allElems = new Set([...Object.keys(leftAtoms), ...Object.keys(rightAtoms)]);
-  const counter = document.getElementById('atomCounter');
+  const allElems=new Set([...Object.keys(leftAtoms),...Object.keys(rightAtoms)]);
+  const counter=document.getElementById('atomCounter');
   if (!counter) return;
-  counter.innerHTML = Array.from(allElems).map(el => {
-    const lc = leftAtoms[el] || 0;
-    const rc = rightAtoms[el] || 0;
-    const balanced = lc === rc && lc > 0;
+  counter.innerHTML=Array.from(allElems).map(el=>{
+    const lc=leftAtoms[el]||0, rc=rightAtoms[el]||0, balanced=lc===rc&&lc>0;
     return `<div class="atom-count-badge ${lc===rc&&lc>0?'balanced':lc>0||rc>0?'unbalanced':''}">
       <span class="atom-sym">${el}</span>
       <span class="left-count">반응물: ${lc}</span>
       <span style="color:var(--text-muted)">|</span>
       <span class="right-count">생성물: ${rc}</span>
-      ${balanced ? '<span style="color:var(--success)">✓</span>' : ''}
+      ${balanced?'<span style="color:var(--success)">✓</span>':''}
     </div>`;
   }).join('');
 }
 
 function clearCoeffs() {
-  const r = state.currentReaction;
+  const r=state.currentReaction;
   [...r.reactants.map((_,i)=>`left_${i}`),...r.products.map((_,i)=>`right_${i}`)].forEach(id=>{
-    const el = document.getElementById(`coeff_${id}`);
-    if(el) el.value='';
+    const el=document.getElementById(`coeff_${id}`); if(el) el.value='';
   });
-  updateAtomCounter();
-  hideFeedback();
+  updateAtomCounter(); hideFeedback();
 }
 
 function checkStage3() {
-  const r = state.currentReaction;
-  const reactants = r.reactants;
-  const products = r.products;
-  const allIds = [...reactants.map((_,i)=>`left_${i}`), ...products.map((_,i)=>`right_${i}`)];
-  const expected = r.coefficients;
+  const r=state.currentReaction;
+  const needsCoeff=r.coefficients.some(c=>c>1);
+  const anyFilled=[...r.reactants.map((_,i)=>`left_${i}`),...r.products.map((_,i)=>`right_${i}`)]
+    .some(id=>{ const el=document.getElementById('coeff_'+id); return el&&parseInt(el.value)>=2; });
+  if (needsCoeff&&!anyFilled){ showFeedback('⚠️ 계수가 필요한 반응이에요. 2 이상 숫자를 입력해보세요!','hint'); return; }
 
-  // 계수가 필요한 반응인데 모든 칸이 비어있는 경우 차단
-  const needsCoeff = expected.some(c => c > 1);
-  const anyFilled = allIds.some(id => {
-    const el = document.getElementById('coeff_' + id);
-    return el && parseInt(el.value) >= 2;
-  });
-  if (needsCoeff && !anyFilled) {
-    showFeedback('⚠️ 계수가 필요한 반응이에요. 2 이상의 숫자를 입력해보세요! (계수가 1인 경우는 빈 칸으로 두면 돼요)', 'hint');
-    return;
-  }
+  const leftAtoms={}, rightAtoms={};
+  r.reactants.forEach((name,i)=>{ const c=getCoeff(`left_${i}`),atoms=r.atoms[r.formulaRaw[name]]||{}; Object.entries(atoms).forEach(([el,n])=>{leftAtoms[el]=(leftAtoms[el]||0)+c*n;}); });
+  r.products.forEach((name,i)=>{ const c=getCoeff(`right_${i}`),atoms=r.atoms[r.formulaRaw[name]]||{}; Object.entries(atoms).forEach(([el,n])=>{rightAtoms[el]=(rightAtoms[el]||0)+c*n;}); });
+  const allElems=new Set([...Object.keys(leftAtoms),...Object.keys(rightAtoms)]);
+  const isBalanced=Array.from(allElems).every(el=>leftAtoms[el]===rightAtoms[el]);
 
-  // First check balance
-  const leftAtoms = {};
-  reactants.forEach((name, i) => {
-    const c = getCoeff(`left_${i}`);
-    const raw = r.formulaRaw[name];
-    const atoms = r.atoms[raw] || {};
-    Object.entries(atoms).forEach(([el, n]) => { leftAtoms[el] = (leftAtoms[el]||0) + c*n; });
-  });
-  const rightAtoms = {};
-  products.forEach((name, i) => {
-    const c = getCoeff(`right_${i}`);
-    const raw = r.formulaRaw[name];
-    const atoms = r.atoms[raw] || {};
-    Object.entries(atoms).forEach(([el, n]) => { rightAtoms[el] = (rightAtoms[el]||0) + c*n; });
-  });
-  const allElems = new Set([...Object.keys(leftAtoms),...Object.keys(rightAtoms)]);
-  const isBalanced = Array.from(allElems).every(el => leftAtoms[el] === rightAtoms[el]);
-
-  // Check exact expected coefficients (simplified ratio)
-  const gotCoeffs = [...reactants.map((_,i)=>getCoeff(`left_${i}`)), ...products.map((_,i)=>getCoeff(`right_${i}`))];
+  const gotCoeffs=[...r.reactants.map((_,i)=>getCoeff(`left_${i}`)),...r.products.map((_,i)=>getCoeff(`right_${i}`))];
 
   if (isBalanced) {
-    // 최솟값 계수인지 확인 (공약수가 1이어야 함)
-    const g = gotCoeffs.reduce(gcd);
-    const isMinimal = g === 1;
-
-    allIds.forEach((id) => {
-      const el = document.getElementById(`coeff_${id}`);
-      if (!el) return;
-      el.classList.remove('correct', 'wrong');
-      el.classList.add(isMinimal ? 'correct' : 'wrong');
-    });
-
+    const g=gotCoeffs.reduce(gcd);
+    const isMinimal=g===1;
+    const allIds=[...r.reactants.map((_,i)=>`left_${i}`),...r.products.map((_,i)=>`right_${i}`)];
+    allIds.forEach(id=>{ const el=document.getElementById(`coeff_${id}`); if(el){ el.classList.remove('correct','wrong'); el.classList.add(isMinimal?'correct':'wrong'); } });
     if (isMinimal) {
-      markStageComplete(2, 40);
-      showFeedback(`🎉 완벽해요! <strong>${buildBalancedEqString(r, gotCoeffs)}</strong><br>반응 전과 후의 원자 수가 모두 같아요! 🏆`, 'correct');
+      markStageComplete(2,40);
+      showFeedback(`🎉 완벽해요! <strong>${buildBalancedEqString(r,gotCoeffs)}</strong><br>반응 전과 후의 원자 수가 모두 같아요! 🏆`,'correct');
       addNextStageBtn(4);
     } else {
-      const simplified = buildBalancedEqString(r, gotCoeffs.map(v => v / g));
-      showFeedback(`⚠️ 원소 수는 맞지만, 계수를 더 줄일 수 있어요!<br>모든 계수를 ${g}로 나눌 수 있는지 확인해보세요.<br><small style="color:var(--text-muted)">힌트: 계수들의 공약수를 찾아보세요.</small>`, 'hint');
+      showFeedback(`⚠️ 원소 수는 맞지만 계수를 더 줄일 수 있어요. 계수들의 최대공약수(${g})로 나눠보세요.`,'hint');
     }
   } else {
-    allIds.forEach((id) => {
-      const el = document.getElementById(`coeff_${id}`);
-      if (!el) return;
-      el.classList.remove('correct', 'wrong');
-      el.classList.add('wrong');
-    });
-    const unbalanced = Array.from(allElems).filter(el => leftAtoms[el] !== rightAtoms[el]);
-    showFeedback(`❌ 아직 맞지 않아요. ${unbalanced.join(', ')} 원소의 수가 달라요!`, 'wrong');
+    const unbalanced=Array.from(allElems).filter(el=>leftAtoms[el]!==rightAtoms[el]);
+    showFeedback(`❌ 아직 맞지 않아요. ${unbalanced.join(', ')} 원소의 수가 달라요!`,'wrong');
   }
 }
 
-function buildBalancedEqString(r, coeffs) {
-  const reactants = r.reactants;
-  const products = r.products;
-  const left = reactants.map((n,i) => {
-    const c = coeffs[i];
-    return (c===1?'':c) + r.formulas[n];
-  }).join(' + ');
-  const right = products.map((n,i) => {
-    const c = coeffs[reactants.length+i];
-    return (c===1?'':c) + r.formulas[n];
-  }).join(' + ');
+function buildBalancedEqString(r,coeffs) {
+  const left=r.reactants.map((n,i)=>(coeffs[i]===1?'':coeffs[i])+r.formulas[n]).join(' + ');
+  const right=r.products.map((n,i)=>(coeffs[r.reactants.length+i]===1?'':coeffs[r.reactants.length+i])+r.formulas[n]).join(' + ');
   return `${left} → ${right}`;
 }
 
-function normalizeCoeffs(c) {
-  const g = c.reduce(gcd);
-  return c.map(v=>v/g);
-}
 function gcd(a,b){return b===0?a:gcd(b,a%b);}
 
-// ===== HELPERS =====
-function markStageComplete(stageIdx, pts) {
-  if (state.stageComplete[stageIdx]) return;
-  state.stageComplete[stageIdx] = true;
-  state.score += pts;
-  const rid = state.currentReaction.id;
-  if (!state.reactionScores[rid]) state.reactionScores[rid] = { stages: 0 };
-  state.reactionScores[rid].stages = Math.max(state.reactionScores[rid].stages, stageIdx+1);
+// ============================================================
+// TOUCH DRAG  (pointer / touch events)
+// ============================================================
+// 포인터 이벤트 기반 구현 – 모든 기기에서 동작
+// ============================================================
+
+function onChipTouchStart(e) {
+  // 이미 tap-selected 상태면 tap flow에 맡김
+  if (tapSelected) return;
+
+  e.preventDefault(); // 스크롤 차단이 핵심!
+  const touch = e.touches[0];
+  const chip  = e.currentTarget;
+  const stage = chip.dataset.stage;
+
+  if (stage === 's1') {
+    touchDragData = { stage:'s1', word:chip.dataset.word, src:chip.dataset.src };
+    createGhost(chip.dataset.word, touch.clientX, touch.clientY);
+  } else if (stage === 's2') {
+    touchDragData = { stage:'s2', formula:chip.dataset.formula, poolIdx:chip.dataset.idx };
+    createGhost(chip.dataset.formula, touch.clientX, touch.clientY);
+  }
+
+  chip.classList.add('dragging');
+
+  function onMove(ev) {
+    ev.preventDefault();
+    const t = ev.touches[0];
+    moveGhost(t.clientX, t.clientY);
+  }
+  function onEnd(ev) {
+    const t = ev.changedTouches[0];
+    chip.classList.remove('dragging');
+    removeGhost();
+
+    const target = elementFromTouchPoint(t.clientX, t.clientY);
+    if (touchDragData) {
+      dispatchTouchDrop(touchDragData, target);
+    }
+    touchDragData = null;
+    document.removeEventListener('touchmove', onMove);
+    document.removeEventListener('touchend',  onEnd);
+  }
+
+  document.addEventListener('touchmove', onMove, {passive:false});
+  document.addEventListener('touchend',  onEnd,  {passive:false});
+}
+
+function dispatchTouchDrop(data, targetEl) {
+  if (!targetEl) return;
+
+  if (data.stage === 's1') {
+    // 어떤 zone에 떨어졌는지 확인
+    const left  = document.getElementById('s1Left');
+    const right = document.getElementById('s1Right');
+    const pool  = document.getElementById('s1Pool');
+    let zone = null;
+    if (left  && (left===targetEl  || left.contains(targetEl)))  zone='left';
+    if (right && (right===targetEl || right.contains(targetEl))) zone='right';
+    if (pool  && (pool===targetEl  || pool.contains(targetEl)))  zone='pool';
+    if (!zone) { touchDragData=null; return; }
+    s1RemoveFromSrc(data.word, data.src);
+    if (zone==='left')  state.s1_left.push(data.word);
+    else if (zone==='right') state.s1_right.push(data.word);
+    else if (!state.s1_pool.includes(data.word)) state.s1_pool.push(data.word);
+    touchDragData=null;
+    s1Refresh();
+
+  } else if (data.stage === 's2') {
+    // slot에 떨어졌는지 확인
+    const slotEl = targetEl.closest('.formula-slot');
+    if (slotEl) {
+      const slotIdx = parseInt(slotEl.dataset.slot);
+      state.s2_slots[slotIdx] = {formula:data.formula, poolIdx:String(data.poolIdx)};
+      touchDragData=null;
+      s2Refresh();
+    } else {
+      touchDragData=null;
+    }
+  }
+}
+
+// ============================================================
+// HELPERS
+// ============================================================
+function markStageComplete(idx, pts) {
+  if (state.stageComplete[idx]) return;
+  state.stageComplete[idx]=true;
+  state.score+=pts;
+  const rid=state.currentReaction.id;
+  if (!state.reactionScores[rid]) state.reactionScores[rid]={stages:0};
+  state.reactionScores[rid].stages=Math.max(state.reactionScores[rid].stages, idx+1);
   updateScore();
   updateStageNav();
   renderReactionSelector();
 }
 
 function updateScore() {
-  document.getElementById('scoreDisplay').textContent = state.score;
-  const total = reactions.length * 3;
-  const done = Object.values(state.reactionScores).reduce((a,v)=>a+v.stages,0);
-  document.getElementById('progressFill').style.width = (done/total*100)+'%';
+  document.getElementById('scoreDisplay').textContent=state.score;
+  const total=reactions.length*3;
+  const done=Object.values(state.reactionScores).reduce((a,v)=>a+v.stages,0);
+  document.getElementById('progressFill').style.width=(done/total*100)+'%';
 }
 
 function addNextStageBtn(next) {
-  const fb = document.getElementById('feedback');
-  if (next <= 3) {
-    const btn = document.createElement('button');
-    btn.className = 'btn btn-success';
-    btn.style.marginTop = '12px';
-    btn.textContent = `▶ ${next}단계로 이동`;
-    btn.onclick = () => goStage(next);
+  const fb=document.getElementById('feedback');
+  if (next<=3) {
+    const btn=document.createElement('button');
+    btn.className='btn btn-success';
+    btn.style.marginTop='12px';
+    btn.textContent=`▶ ${next}단계로 이동`;
+    btn.onclick=()=>goStage(next);
     fb.appendChild(document.createElement('br'));
     fb.appendChild(btn);
   }
-  // next > 3 means reaction complete — check if all 6 done
-  if (next > 3) {
-    const allDone = reactions.every(r => (state.reactionScores[r.id]?.stages || 0) >= 3);
-    if (allDone) {
-      setTimeout(showAllComplete, 800);
-    } else {
-      const btn = document.createElement('button');
-      btn.className = 'btn btn-success';
-      btn.style.marginTop = '12px';
-      btn.textContent = '🎊 다른 반응 도전하기';
-      btn.onclick = () => {
-        document.getElementById('stageNav').style.display = 'none';
-        document.getElementById('gameArea').style.display = 'none';
-        state.currentReaction = null;
+  if (next>3) {
+    const allDone=reactions.every(r=>(state.reactionScores[r.id]?.stages||0)>=3);
+    if (allDone) { setTimeout(showAllComplete,800); }
+    else {
+      const btn=document.createElement('button');
+      btn.className='btn btn-success';
+      btn.style.marginTop='12px';
+      btn.textContent='🎊 다른 반응 도전하기';
+      btn.onclick=()=>{
+        document.getElementById('stageNav').style.display='none';
+        document.getElementById('gameArea').style.display='none';
+        state.currentReaction=null;
         renderReactionSelector();
       };
       fb.appendChild(document.createElement('br'));
@@ -1587,103 +1094,122 @@ function addNextStageBtn(next) {
 }
 
 function showAllComplete() {
-  document.getElementById('stageNav').style.display = 'none';
-  document.getElementById('gameArea').style.display = 'none';
-  document.getElementById('reactionSelector').style.display = 'none';
-  document.getElementById('finalScore').textContent = state.score + '점';
+  document.getElementById('stageNav').style.display='none';
+  document.getElementById('gameArea').style.display='none';
+  document.getElementById('reactionSelector').style.display='none';
+  document.getElementById('finalScore').textContent=state.score+'점';
   document.getElementById('allComplete').classList.add('show');
 }
 
 function resetAll() {
-  state.score = 0;
-  state.reactionScores = {};
-  state.currentReaction = null;
-  state.currentStage = 1;
-  state.stageComplete = [false, false, false];
+  state={...state, score:0, reactionScores:{}, currentReaction:null, currentStage:1, stageComplete:[false,false,false], s1_left:[], s1_right:[], s1_pool:[], s2_pool:[], s2_slots:{}};
   document.getElementById('allComplete').classList.remove('show');
-  document.getElementById('reactionSelector').style.display = 'grid';
-  document.getElementById('stageNav').style.display = 'none';
-  document.getElementById('gameArea').style.display = 'none';
+  document.getElementById('reactionSelector').style.display='grid';
+  document.getElementById('stageNav').style.display='none';
+  document.getElementById('gameArea').style.display='none';
   updateScore();
   renderReactionSelector();
 }
 
-function showFeedback(msg, type) {
-  const fb = document.getElementById('feedback');
-  fb.innerHTML = msg;
-  fb.className = `feedback show ${type === 'correct' ? 'correct-fb' : type === 'hint' ? 'hint-fb' : 'wrong-fb'}`;
+function showFeedback(msg,type) {
+  const fb=document.getElementById('feedback');
+  fb.innerHTML=msg;
+  fb.className=`feedback show ${type==='correct'?'correct-fb':type==='hint'?'hint-fb':'wrong-fb'}`;
 }
-function hideFeedback() {
-  const fb = document.getElementById('feedback');
-  if (fb) fb.className = 'feedback';
-}
+function hideFeedback() { const fb=document.getElementById('feedback'); if(fb) fb.className='feedback'; }
 
 function showHint() {
-  const r = state.currentReaction;
-  const n = state.currentStage;
-
-  // 2단계 힌트: 화학식 구조 설명, 답은 미공개
-  function stage2Hint() {
-    const allNames = [...r.reactants, ...r.products];
-    const tips = allNames.map(name => {
-      const raw = r.formulaRaw[name];
-      const atoms = r.atoms[raw] || {};
-      const elemList = Object.entries(atoms).map(([el, cnt]) => `${el} ${cnt}개`).join(', ');
-      return `<strong>${name}</strong>: ${elemList}로 이루어진 물질`;
+  const r=state.currentReaction, n=state.currentStage;
+  function s2h() {
+    const allNames=[...r.reactants,...r.products];
+    const tips=allNames.map(name=>{
+      const atoms=r.atoms[r.formulaRaw[name]]||{};
+      const list=Object.entries(atoms).map(([el,cnt])=>`${el} ${cnt}개`).join(', ');
+      return `<strong>${name}</strong>: ${list}`;
     }).join('<br>');
-    return `💡 힌트: 각 물질이 어떤 원소로 구성되어 있는지 생각해보세요!<br>${tips}<br><br>화학식에서 숫자는 원소의 개수를 나타내요. 예) H₂ → H 원자 2개`;
+    return `💡 각 물질의 원소 구성:<br>${tips}`;
   }
-
-  // 3단계 힌트: 원소별 개수 차이를 안내, 계수 자체는 미공개
-  function stage3Hint() {
-    const reactants = r.reactants;
-    const products = r.products;
-    // 계수 없이(모두 1) 원자 수 계산
-    const leftAtoms = {};
-    reactants.forEach(name => {
-      const atoms = r.atoms[r.formulaRaw[name]] || {};
-      Object.entries(atoms).forEach(([el,n]) => { leftAtoms[el] = (leftAtoms[el]||0) + n; });
-    });
-    const rightAtoms = {};
-    products.forEach(name => {
-      const atoms = r.atoms[r.formulaRaw[name]] || {};
-      Object.entries(atoms).forEach(([el,n]) => { rightAtoms[el] = (rightAtoms[el]||0) + n; });
-    });
-    const allElems = new Set([...Object.keys(leftAtoms),...Object.keys(rightAtoms)]);
-    const lines = Array.from(allElems).map(el => {
-      const l = leftAtoms[el]||0, rv = rightAtoms[el]||0;
-      if (l === rv) return `${el}: 반응 전 ${l}개 = 반응 후 ${rv}개 ✓`;
-      return `${el}: 반응 전 ${l}개 ≠ 반응 후 ${rv}개 → 계수를 조정해 맞춰보세요`;
+  function s3h() {
+    const la={},ra={};
+    r.reactants.forEach(n=>{ const a=r.atoms[r.formulaRaw[n]]||{}; Object.entries(a).forEach(([el,v])=>{la[el]=(la[el]||0)+v;}); });
+    r.products.forEach(n=>{ const a=r.atoms[r.formulaRaw[n]]||{}; Object.entries(a).forEach(([el,v])=>{ra[el]=(ra[el]||0)+v;}); });
+    const all=new Set([...Object.keys(la),...Object.keys(ra)]);
+    const lines=Array.from(all).map(el=>{
+      const l=la[el]||0, rv=ra[el]||0;
+      return l===rv?`${el}: 반응 전 ${l} = 반응 후 ${rv} ✓`:`${el}: 반응 전 ${l} ≠ 반응 후 ${rv} → 계수 조정 필요`;
     }).join('<br>');
-    return `💡 힌트: 계수 없이(전부 1로 가정) 원소 개수를 세어보면:<br>${lines}<br><br>계수를 곱하면 원자 수가 늘어나요. 양쪽이 같아지도록 맞춰보세요!`;
+    return `💡 계수 없이(전부 1) 원소 개수:<br>${lines}`;
   }
-
-  const hints = [
-    `💡 힌트: 반응물은 화살표(→) 왼쪽, 생성물은 오른쪽에 놓으세요. "${r.name}"에서 반응물은 ${r.reactants.length}개, 생성물은 ${r.products.length}개예요.`,
-    stage2Hint(),
-    stage3Hint(),
+  const hints=[
+    `💡 반응물은 화살표 왼쪽, 생성물은 오른쪽. 반응물 ${r.reactants.length}개, 생성물 ${r.products.length}개예요.`,
+    s2h(), s3h()
   ];
-  showFeedback(hints[n-1], 'hint');
+  showFeedback(hints[n-1],'hint');
 }
 
 function renderFormula(f) {
-  // Convert H2O, CO2 style to HTML with sub/superscript if needed
-  return f.replace(/(\d+)/g, '<sub>$1</sub>');
+  return String(f).replace(/(\d+)/g,'<sub>$1</sub>');
 }
-
-function arraysMatch(a, b) {
-  return a.length === b.length && a.every((v,i)=>v===b[i]);
-}
-
+function arraysMatch(a,b) { return a.length===b.length&&a.every((v,i)=>v===b[i]); }
 function shuffle(arr) {
-  for (let i = arr.length-1; i>0; i--) {
-    const j = Math.floor(Math.random()*(i+1));
-    [arr[i],arr[j]] = [arr[j],arr[i]];
-  }
+  for(let i=arr.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [arr[i],arr[j]]=[arr[j],arr[i]]; }
   return arr;
 }
 
-// ===== START =====
+// ============================================================
+// NAV & SELECTION
+// ============================================================
+function init() { renderReactionSelector(); updateScore(); }
+
+function renderReactionSelector() {
+  const el=document.getElementById('reactionSelector');
+  el.innerHTML=reactions.map(r=>{
+    const sc=state.reactionScores[r.id]||{stages:0};
+    const done=sc.stages===3;
+    return `<div class="reaction-card ${state.currentReaction?.id===r.id?'selected':''} ${done?'completed':''}"
+      onclick="selectReaction(${r.id})">
+      <div class="emoji">${r.emoji}</div>
+      <div class="name">${r.name}</div>
+      <div style="font-size:0.72rem;color:var(--accent);margin:4px 0">Lv.${r.level} ${'⭐'.repeat(r.level)}</div>
+      <div class="status">${done?'✅ 완료!':sc.stages>0?`${sc.stages}단계 완료`:'도전 전'}</div>
+    </div>`;
+  }).join('');
+}
+
+function selectReaction(id) {
+  state.currentReaction=reactions[id];
+  state.currentStage=1;
+  state.stageComplete=[false,false,false];
+  const sc=state.reactionScores[id];
+  if (sc) { for(let i=0;i<sc.stages;i++) state.stageComplete[i]=true; state.currentStage=Math.min(sc.stages+1,3); }
+  renderReactionSelector();
+  document.getElementById('stageNav').style.display='flex';
+  document.getElementById('gameArea').style.display='block';
+  updateStageNav();
+  renderStage(state.currentStage);
+}
+
+function goStage(n) {
+  if (n>1&&!state.stageComplete[n-2]) { showFeedback('이전 단계를 먼저 완료하세요!','hint'); return; }
+  state.currentStage=n; updateStageNav(); renderStage(n);
+}
+
+function updateStageNav() {
+  [1,2,3].forEach(i=>{
+    const btn=document.getElementById(`stageBtn${String.fromCharCode(64+i)}`);
+    btn.className='stage-btn';
+    if (i===state.currentStage) btn.classList.add('active');
+    if (state.stageComplete[i-1]) btn.classList.add('done');
+  });
+}
+
+function renderStage(n) {
+  hideFeedback(); clearTapSelection();
+  if (n===1) renderStage1();
+  else if (n===2) renderStage2();
+  else renderStage3();
+}
+
 init();
 </script>
 </body>
